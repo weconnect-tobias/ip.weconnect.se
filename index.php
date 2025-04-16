@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>What's my IP dude!</title>
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="img/icon-144x144-1.png" sizes="192x192" />
+	<link rel="apple-touch-icon" href="img/icon-144x144-1.png" />
+	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
+	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/v4-shims.min.css" integrity="sha512-4yDn1AmIfvyydlRqsIga3JribpHu5HdkIFTBZjJPcz01tcsd8B9UwObwZCGez1ZOyUNnxjNQNcZEElhkguF76Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<?php include("ip.php"); ?>
+	
+<body>
+
+<header>
+  <div class="header-container">
+    <img src="img/WeConnect-Logo-White-350.png" alt="WeConnect Logo">
+    <nav>
+  <ul>
+    <li>
+      <a href="#">Tjänster</a>
+      <ul>
+        <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
+        <li><a href="https://weconnect.se/it-support/">IT-Support</a></li>
+        <li><a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
+        <li><a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
+        <li><a href="https://weconnect.se/utveckling/">Utveckling</a></li>
+        <li><a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
+      </ul>
+    </li>
+    <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
+    <li>
+      <a href="https://weconnect.se/kontakt/">Kontakt</a>
+      <ul>
+        <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
+      </ul>
+    </li>
+    <li><a href="https://123support.se">Fjärrsupport</a></li>
+  </ul>
+</nav>
+  </div>
+</header>
+
+<!-- Blended Gradient Section -->
+<main id="main-content">
+  <div>
+    <h1>IT support & lösningar</h1>
+    <p>För små & mellanstora företag</p>
+  </div>
+</main>
+
+<!-- White Background Section -->
+<section id="main-content-white">
+		<div id="tools" class="tools">
+			<p>Your IP:</p>
+		</div>
+		<br>
+		<div id="ip-lookup" class="tools">
+			<h1><?php echo $IP; ?></h1>
+		</div>
+
+		<br>
+		<div id="more-info" class="tools">
+			<ul>
+			<?php 
+				//echo '<li><strong>Remote Port:</strong> <span>'.$port.'</span></li>';
+				//echo '<li><strong>Request Method:</strong> <span>'.$method.'</span></li>';
+				//echo '<li><strong>Server Protocol:</strong> <span>'.$protocol.'</span></li>';
+				echo '<li><strong>Server Host:</strong> <span>'.$host.'</span></li>';
+				echo '<li><strong>User Agent:</strong> <span>'.$agent.'</span></li>';
+				if ($proxy) echo '<li><strong>Proxy: <span>'.($proxy) ? $proxy : ''.'</span></li>';
+
+				$time_start = microtime(true);
+				usleep(100);
+				$time_end = microtime(true);
+				$time = $time_end - $time_start;
+			?>
+			</ul>
+		<div id="tools" class="tools">
+			<p>Time And Date:</p>
+		</div>
+		<div id="ip-lookup" class="tools">
+		<h1><?php echo date('H:i:s d-m-Y');?></h1>
+		</div>
+			<p><small>It took <?php echo $time; ?> seconds to share this info.</small></p>
+		</div>
+</section>
+
+<footer style="margin-top: auto;">
+  <div class="footer-section">
+    <img src="img/WeConnect-Logo-White-350.png" alt="WeConnect Logo" height="40">
+  </div>
+  <div class="footer-section">
+    <strong>Adress Strömstad</strong><br>
+    Oslovägen 50<br>
+    452 35 Strömstad
+  </div>
+  <div class="footer-section">
+    <strong>Adress Göteborg</strong><br>
+    Drottninggatan 38 3tr<br>
+    411 07 Göteborg
+  </div>
+  <div class="footer-section">
+    <strong>Kontakt info</strong><br>
+    <a href="tel:+4652666066">+46 526 66066</a><br>
+    <a href="mailto:info@weconnect.se">info@weconnect.se</a>
+  </div>
+</footer>
+<script src="js/ip.js"></script>
+
+</body>
+</html>
