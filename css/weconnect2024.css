@@ -236,28 +236,31 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Gemensam styling för IPv4 och IPv6-boxar med klassen .ip-box */
+/* Styling för IPv4/IPv6-boxar med info-list-liknande utseende och större text */
 .ip-box {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  height: 60px;
-  line-height: 60px;
-  overflow: hidden;
-  margin: 20px auto;
-  width: 80%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f8f8;  /* Ljus bakgrund för kontrast */
+  color: #333;              /* Mörk text för bra läsbarhet */
+  border-radius: 6px;       /* Rundade hörn */
+  padding: 15px 20px;       /* Generöst med utrymme runt innehållet */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 20px auto;        /* Avstånd ovan och under, centrerat */
+  width: 80%;               /* Anpassa bredden efter behov */
+  display: flex;
+  align-items: center;      /* Vertikalt centrerat innehåll */
+  justify-content: center;  /* Horisontellt centrerat innehåll */
 }
 
 .ip-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Större font för att informationen ska vara tydligare */
 .ip-box h1 {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 24px;         /* Större textstorlek */
+  font-weight: bold;
+  color: #0d1e55;          /* Använd din primära färg för texten */
 }
