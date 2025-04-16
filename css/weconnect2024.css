@@ -241,6 +241,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+<<<<<<< HEAD
 /* Uppdaterad styling för IPv4/IPv6-boxar med info-list-liknande utseende och större text */
 .ip-box {
   background-color: #f8f8f8;  /* Ljus bakgrund för kontrast */
@@ -255,18 +256,36 @@
   display: flex;
   align-items: center;      /* Vertikalt centrerat innehåll */
   justify-content: center;  /* Horisontellt centrerat innehåll */
+=======
+/* Gemensam styling för IPv4 och IPv6-boxar med klassen .ip-box */
+.ip-box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 80%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+>>>>>>> parent of 6b6328d (0.9)
 }
 
 .ip-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* Större font för att informationen ska vara tydligare */
 .ip-box h1 {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   font-size: 24px;         /* Större textstorlek */
   font-weight: bold;
   color: #0d1e55;          /* Primärfärg för texten */
+=======
+  font-size: 20px;
+>>>>>>> parent of 6b6328d (0.9)
 }
