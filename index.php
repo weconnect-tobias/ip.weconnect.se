@@ -51,13 +51,19 @@
 
 <!-- White Background Section -->
 <section id="main-content-white">
-		<div id="tools" class="tools">
-			<p>Your IP:</p>
-		</div>
-		<br>
-		<div id="ip-lookup" class="tools">
-			<h1><?php echo $IP; ?></h1>
-		</div>
+  <!-- Box för IPv4-adressen -->
+  <div id="ipv4-box" class="tools">
+    <h1>IPv4: <?php echo $ipv4 ? $ipv4 : 'N/A'; ?></h1>
+  </div>
+  
+  <br>
+  
+  <!-- Box för IPv6-adressen (visas bara om den finns) -->
+  <?php if (!empty($ipv6)) : ?>
+  <div id="ipv6-box" class="tools">
+    <h1>IPv6: <?php echo $ipv6; ?></h1>
+  </div>
+  <?php endif; ?>
 
 		<br>
 		<div id="more-info" class="tools">
@@ -76,14 +82,6 @@
 				$time = $time_end - $time_start;
 			?>
 			</ul>
-		<div id="tools" class="tools">
-			<p>Time And Date:</p>
-		</div>
-		<div id="ip-lookup" class="tools">
-		<h1><?php echo date('H:i:s d-m-Y');?></h1>
-		</div>
-			<p><small>It took <?php echo $time; ?> seconds to share this info.</small></p>
-		</div>
 </section>
 
 <footer style="margin-top: auto;">
