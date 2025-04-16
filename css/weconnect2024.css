@@ -236,7 +236,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Styling för IPv4/IPv6-boxar med info-list-liknande utseende och större text */
+/* Uppdaterad styling för IPv4/IPv6-boxar med info-list-liknande utseende och större text */
 .ip-box {
   background-color: #f8f8f8;  /* Ljus bakgrund för kontrast */
   color: #333;              /* Mörk text för bra läsbarhet */
@@ -245,7 +245,8 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin: 20px auto;        /* Avstånd ovan och under, centrerat */
-  width: 80%;               /* Anpassa bredden efter behov */
+  width: 80%;               /* Samma breddinställning */
+  max-width: 900px;         /* Lägg till max-width för att matcha info-listens bredd */
   display: flex;
   align-items: center;      /* Vertikalt centrerat innehåll */
   justify-content: center;  /* Horisontellt centrerat innehåll */
@@ -262,5 +263,5 @@
   padding: 0;
   font-size: 24px;         /* Större textstorlek */
   font-weight: bold;
-  color: #0d1e55;          /* Använd din primära färg för texten */
+  color: #0d1e55;          /* Primärfärg för texten */
 }
