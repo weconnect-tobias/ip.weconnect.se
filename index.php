@@ -77,10 +77,6 @@
 				echo '<li><strong>User Agent:</strong> <span>'.$agent.'</span></li>';
 				if ($proxy) echo '<li><strong>Proxy: <span>'.($proxy) ? $proxy : ''.'</span></li>';
 
-				$time_start = microtime(true);
-				usleep(100);
-				$time_end = microtime(true);
-				$time = $time_end - $time_start;
 			?>
 			</ul>
 </section>
@@ -105,7 +101,6 @@
     <a href="mailto:info@weconnect.se">info@weconnect.se</a>
   </div>
 </footer>
-<script src="js/ip.js"></script>
 
 </body>
 </html>
