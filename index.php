@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <header>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>What's my IP dude!</title>
 	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/v4-shims.min.css" integrity="sha512-4yDn1AmIfvyydlRqsIga3JribpHu5HdkIFTBZjJPcz01tcsd8B9UwObwZCGez1ZOyUNnxjNQNcZEElhkguF76Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<?php include("ip.php"); ?>
-	
+</header>
 <body>
 
 <header>
