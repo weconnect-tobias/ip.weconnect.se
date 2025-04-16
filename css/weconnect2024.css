@@ -1,0 +1,203 @@
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header placed above content with transparent background */
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      background: transparent;
+      margin: 0;
+      border: none;
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    /* Main Content - Gradient Background Partial Height */
+    #main-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 400px;
+      background: linear-gradient(135deg, #0d1e55, #9a007e);
+      margin: 0;
+      padding-top: 120px;
+      position: relative;
+    }
+    #main-content > div {
+      padding: 40px 20px;
+      margin: 0 auto;
+      max-width: 900px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    #main-content h1 {
+      font-size: 48px;
+    }
+    #main-content p {
+      font-size: 22px;
+    }
+
+
+    /* Main Content - White Background Version */
+    #main-content-white {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      background: white;
+      color: black;
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    #main-content-white h1 {
+      font-size: 36px;
+      color: #0d1e55;
+    }
+    #main-content-white p {
+      font-size: 18px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d1e55;
+      padding: 30px;
+      display: flex;
+      justify-content: space-around;
+      text-align: left;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      border: none;
+    }
+    .footer-section {
+      max-width: 300px;
+      margin: 10px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+      /* Dropdown Menu */
+    nav ul li {
+      position: relative;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      padding: 10px 0;
+      z-index: 99;
+      border-radius: 4px;
+      min-width: 240px;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li {
+      display: block;
+      padding: 8px 20px;
+    }
+    nav ul li ul li a {
+      color: white;
+      display: block;
+      text-align: left;
+    }
+    nav ul li ul li a:hover {
+      opacity: 0.8;
+    }
+
+.tools p {
+	margin-left: 20px;
+	color: #000;
+	font-family: Georgia, serif;
+	-webkit-text-shadow: 0 0 0 #000;
+	-moz-text-shadow: 0 0 7px #000;
+	text-shadow: 0 0 0 #000
+}
+
+#ip-lookup {
+	border: 1px solid #aaa;
+	background-position: 50% 50%;
+	background-repeat: repeat-x;
+	background-color: #7777;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 10px;
+	border-radius: 11px;
+	-webkit-box-shadow: 0 0 7px #111;
+	-moz-box-shadow: 0 0 7px #111;
+	box-shadow: 0 0 7px #111;
+	text-align: center;
+	line-height: 40px;
+	height: 50px
+}
+
+#tools p {
+	font-size: 77px
+}
+
+#more p {
+	font-size: 24px
+}
+
+#more-info p {
+	font-size: 18px
+}
+
+#more-info ul {
+	margin: 20px 0 35px 50px;
+	font-size: 18px;
+	color: #000
+}
+
+#more-info li {
+	margin: 10px 0;
+	line-height: 25px;
+	font-family: Helvetica, Arial
+}
+
