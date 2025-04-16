@@ -201,27 +201,6 @@
 	font-family: Helvetica, Arial
 }
 
-/* Gemensam styling för IP-boxar */
-#ipv4-box, #ipv6-box {
-  border: 1px solid #aaa;
-  background-color: #777777; /* Använd gärna en opak 6-siffrig hex */
-  border-radius: 11px;
-  box-shadow: 0 0 7px #111;
-  text-align: center;
-  height: 50px;
-  line-height: 50px;
-  overflow: hidden; /* Förhindrar att innehållet rymmer utanför */
-  margin: 10px auto;
-  width: 80%; /* Justera bredden efter behov */
-}
-
-/* Ta bort standardmarginaler för <h1> inne i boxarna */
-#ipv4-box h1, #ipv6-box h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 20px; /* Anpassa storleken efter dina behov */
-}
-
 /* Modern styling för info-listan */
 .info-list {
   list-style: none;
@@ -281,6 +260,4 @@
   margin: 0;
   padding: 0;
   font-size: 20px;
-  line-height: 60px;
-  color: #0d1e55;
 }

@@ -53,7 +53,7 @@
 <!-- White Background Section -->
 <section id="main-content-white">
   <!-- Box för IPv4-adressen -->
-  <div id="ipv4-box" class="ip-box">
+  <div  class="tools ip-box">
     <h1>IPv4: <?php echo $ipv4 ? $ipv4 : 'N/A'; ?></h1>
   </div>
   
@@ -61,7 +61,7 @@
   
   <!-- Box för IPv6-adressen (visas bara om den finns) -->
   <?php if (!empty($ipv6)) : ?>
-  <div id="ipv6-box" class="ip-box">
+  <div class="tools ip-box">
     <h1>IPv6: <?php echo $ipv6; ?></h1>
   </div>
   <?php endif; ?>
