@@ -68,7 +68,7 @@
 
 		<br>
 		<div id="more-info" class="tools">
-			<ul>
+			<ul class="info-list">
 			<?php 
 				//echo '<li><strong>Remote Port:</strong> <span>'.$port.'</span></li>';
 				//echo '<li><strong>Request Method:</strong> <span>'.$method.'</span></li>';
