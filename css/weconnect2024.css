@@ -241,11 +241,10 @@
   background-color: #f8f8f8;  /* Ljus bakgrund för kontrast */
   color: #333;              /* Mörk text för bra läsbarhet */
   border-radius: 6px;       /* Rundade hörn */
-  padding: 15px 20px;       /* Generöst med utrymme runt innehållet */
+  padding: 0;       /* Generöst med utrymme runt innehållet */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin: 20px auto;        /* Avstånd ovan och under, centrerat */
-  width: 80%;               /* Samma breddinställning */
   max-width: 900px;         /* Lägg till max-width för att matcha info-listens bredd */
   display: flex;
   align-items: center;      /* Vertikalt centrerat innehåll */
