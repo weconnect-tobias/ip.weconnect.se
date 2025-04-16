@@ -205,7 +205,12 @@
 .info-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+
+  /* Se till att bredd och marginal matchar ip-box! */
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
