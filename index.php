@@ -53,8 +53,16 @@
 <!-- White Background Section -->
 <section id="main-content-white">
   <div class="ip-box">
-    <h1>Din IP Adress: <?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></h1>
+    <h1>Din IP Adress är: <?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></h1>
   </div>
+
+  <div>
+  <h2>Vad är min IP-adress?</h2>
+  <p>
+    Den här sidan visar din publika IP-adress – alltså det "nummer" som identifierar din internetanslutning just nu.  
+    Du kan behöva den här informationen om du får hjälp av support, ska ställa in en nätverkstjänst eller bara är nyfiken.
+  </p>
+</div>
 
 </section>
 
