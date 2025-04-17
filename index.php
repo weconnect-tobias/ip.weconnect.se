@@ -74,7 +74,7 @@
 <!-- Blended Gradient Section -->
 <main id="main-content">
   <div>
-    <h1>IT support & lösningar</h1>
+    <h2>IT support & lösningar</h2>
     <p>För små & mellanstora företag</p>
   </div>
 </main>
