@@ -151,6 +151,11 @@
       opacity: 0.8;
     }
 
+    nav ul li > a i.fa-chevron-down {
+      font-size: 0.75em;
+      margin-left: 6px;
+    }
+
 /* IP‑boxen fyller hela ”content”-bredden och centrerar sig i containern */
 #main-content-white .ip-box {
   /* Gör boxen lika bred som hela containern (900px) */
