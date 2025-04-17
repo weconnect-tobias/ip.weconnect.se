@@ -12,12 +12,17 @@
 }
 
 html, body {
+  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Baloo Da 2', 'Open Sans', sans-serif;
   color: #fff;
   text-align: center;
-  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
   display: flex;
   flex-direction: column;
 }
@@ -109,7 +114,6 @@ nav ul li ul li a:hover {
   transition: transform 0.3s ease;
 }
 
-/* Responsive icon-chevron */
 @media (max-width: 600px) {
   .icon-chevron {
     width: 16px;
@@ -118,8 +122,9 @@ nav ul li ul li a:hover {
   }
 }
 
-/* ========== MAIN CONTENT - GRADIENT VERSION ========== */
+/* ========== MAIN CONTENT ========== */
 #main-content {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,7 +154,7 @@ nav ul li ul li a:hover {
   font-size: 22px;
 }
 
-/* ========== MAIN CONTENT - WHITE VERSION ========== */
+/* ========== WHITE CONTENT SECTION ========== */
 #main-content-white {
   display: flex;
   flex-direction: column;
@@ -203,6 +208,25 @@ nav ul li ul li a:hover {
   letter-spacing: 0.5px;
   color: #003366;
   transition: color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  text-decoration: underline dotted;
+}
+
+.ip-number.copied {
+  color: #4caf50;
+}
+
+.ip-number::after {
+  content: " 📋";
+  font-size: 0.9em;
+  margin-left: 8px;
+  opacity: 0.6;
+}
+
+.ip-number.copied::after {
+  content: " ✅";
+  opacity: 1;
 }
 
 /* ========== FOOTER ========== */
@@ -215,6 +239,7 @@ footer {
   flex-wrap: wrap;
   margin-bottom: 0;
   border: none;
+  flex-shrink: 0;
 }
 
 .footer-section {
@@ -268,29 +293,4 @@ footer a {
   footer {
     background-color: #111835;
   }
-}
-
-.ip-number {
-  cursor: pointer;
-  transition: color 0.3s;
-  position: relative;
-  text-decoration: underline dotted;
-}
-
-/* När IP:n är kopierad – visuell feedback */
-.ip-number.copied {
-  color: #4caf50; /* Grön färg som feedback */
-}
-
-/* Valfritt: Lägg till ikon efter */
-.ip-number::after {
-  content: " 📋";
-  font-size: 0.9em;
-  margin-left: 8px;
-  opacity: 0.6;
-}
-
-.ip-number.copied::after {
-  content: " ✅";
-  opacity: 1;
 }
