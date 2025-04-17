@@ -122,9 +122,8 @@ nav ul li ul li a:hover {
   }
 }
 
-/* ========== MAIN CONTENT ========== */
+/* ========== MAIN CONTENT - Gradient Header Area (optional) ========== */
 #main-content {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,8 +153,9 @@ nav ul li ul li a:hover {
   font-size: 22px;
 }
 
-/* ========== WHITE CONTENT SECTION ========== */
+/* ========== WHITE CONTENT BLOCK ========== */
 #main-content-white {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -264,6 +264,7 @@ footer a {
   }
 
   #main-content-white {
+    flex: 1;
     background-color: #1a1a2e;
     color: #ffffff;
     padding: 50px 20px;
