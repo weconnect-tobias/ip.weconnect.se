@@ -83,9 +83,8 @@
     #main-content-white {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: auto;
+      /* ta bort align-items:center; eller skriv: */
+      align-items: stretch;
       background: white;
       color: black;
       padding: 50px 20px;
@@ -152,36 +151,36 @@
       opacity: 0.8;
     }
 
-/* Gör så att ip-box fyller hela huvudsakliga content‑bredden */
+/* IP‑boxen fyller hela ”content”-bredden och centrerar sig i containern */
 #main-content-white .ip-box {
-  width: 100%;            /* Tar hela tillgängliga bredden i containern */
-  max-width: 900px;       /* Samma max-bredd som #main-content-white */
-  margin: 20px 0;         /* Lite luft ovan/under */
+  width: 100%;
+  max-width: 900px;          /* Samma som containerns max-bredd */
+  margin: 20px 0;            /* Luft ovan/under */
   
-  /* Mer “andrum” inuti */
-  padding: 20px 25px;
+  /* Mer luft inuti */
+  padding: 20px;
   
-  /* Bakgrund & kant för kontrast */
-  background-color: #f0f4f8;    /* Ljust gråblå ton */
-  border: 1px solid #dde2e6;    /* Diskret kant */
+  /* Diskret bakgrund & kant */
+  background-color: #f0f4f8; /* Ljust gråblå ton */
+  border: 1px solid #dde2e6;
   border-radius: 8px;
   
-  /* Starkare skugga för att lyfta upp boxen */
+  /* Skugga för ”kort”-effekt */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover-effekt */
+/* Hover‑effekt */
 #main-content-white .ip-box:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Tydligare text */
+/* Själva texten – större och tydligare */
 #main-content-white .ip-box h1 {
   margin: 0;
-  font-size: 1.5rem;        /* ca 24px–26px beroende på root‑font */
+  font-size: 1.5rem;   /* ca 24px */
   font-weight: 700;
-  color: #0d1e55;           /* Mörk primärfärg */
+  color: #0d1e55;      /* Primärfärg */
   line-height: 1.2;
 }
