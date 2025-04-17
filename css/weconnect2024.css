@@ -151,6 +151,13 @@
       opacity: 0.8;
     }
 
+    .icon-chevron {
+      width: 0.75em;
+      height: auto;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
 /* IP‑boxen fyller hela ”content”-bredden och centrerar sig i containern */
 #main-content-white .ip-box {
   /* Gör boxen lika bred som hela containern (900px) */

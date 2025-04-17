@@ -9,7 +9,6 @@
 	<link rel="apple-touch-icon" href="img/icon-144x144-1.png" />
 	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
 	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -19,7 +18,7 @@
     <nav>
   <ul>
     <li>
-    <a href="#">Tjänster <i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#">Tjänster <img src="img/icons/chevron-down-solid.svg" alt="" class="icon-chevron"></a>
       <ul>
         <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
         <li><a href="https://weconnect.se/it-support/">IT-Support</a></li>
@@ -31,7 +30,7 @@
     </li>
     <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
     <li>
-      <a href="https://weconnect.se/kontakt/">Kontakt <i class="fa-solid fa-chevron-down"></i></a>
+      <a href="https://weconnect.se/kontakt/">Kontakt <img src="img/icons/chevron-down-solid.svg" alt="" class="icon-chevron"></a>
       <ul>
         <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
       </ul>
