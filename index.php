@@ -1,9 +1,4 @@
 <?php include __DIR__ . '/ip.php'; ?>
-<?php header('Content-Security-Policy: default-src \'self\'; img-src \'self\' https:; script-src \'self\'; style-src \'self\' https://cdnjs.cloudflare.com;');  ?>
-<?php header('Strict-Transport-Security: max-age=63072000; includeSubDomains; preload'); ?>
-<?php header('X-Content-Type-Options: nosniff'); ?>
-<?php header('X-Frame-Options: DENY'); ?>
-<?php header('Referrer-Policy: same-origin'); ?>
 <!DOCTYPE html>
 <html>
   <head>
