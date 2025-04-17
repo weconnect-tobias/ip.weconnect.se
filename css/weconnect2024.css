@@ -241,6 +241,13 @@ footer a {
   #main-content-white {
     background-color: #1a1a2e;
     color: #ffffff;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   #main-content-white .ip-box {
