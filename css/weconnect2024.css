@@ -244,9 +244,8 @@
   padding: 10px 15px;            /* Samma padding som i info-list li */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Samma skugga */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 20px auto;             /* Centrerat med samma marginal */
-  width: 80%;                    /* Samma breddinställning */
-  max-width: 900px;              /* Samma maxbredd som info-listan */
+  width: 100%;       /* fyll ut containerns bredd */
+  margin: 10px 0;    /* ge lite luft ovan/under */
 }
 
 .ip-box:hover {
