@@ -56,14 +56,14 @@
   <!-- Visa IPv4 endast om den finns -->
   <?php if (!empty($ipv4)): ?>
   <div class="tools ip-box">
-    <h1>IPv4: <?php echo $ipv4; ?></h1>
+    <h1>IPv4: <?= htmlspecialchars($ipv4, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></h1>
   </div>
   <?php endif; ?>
 
   <!-- Visa IPv6 endast om den finns -->
   <?php if (!empty($ipv6)): ?>
   <div class="tools ip-box">
-    <h1>IPv6: <?php echo $ipv6; ?></h1>
+    <h1>IPv6: <?= htmlspecialchars($ipv6, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></h1>
   </div>
   <?php endif; ?>
 
