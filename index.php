@@ -1,8 +1,8 @@
 <?php include __DIR__ . '/ip.php'; ?>
 <!DOCTYPE html>
-<html>
+<html lang="sv">
   <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
 	<title>Vad är min IP-adress? | Se din publika IP – WeConnect</title>
   <meta name="description" content="Se din publika IP-adress direkt på ip.weconnect.se – ingen inloggning, inga cookies, bara din aktuella IPv4- eller IPv6-adress. Perfekt vid IT-support eller nätverksfelsökning.">	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="canonical" href="https://ip.weconnect.se/" />
@@ -11,6 +11,7 @@
 	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
 	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
   <meta property="og:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
+  <meta property="og:locale" content="sv_SE">
   <meta property="og:description" content="Kolla din publika IP-adress snabbt och enkelt – ingen spårning, bara ren info. Användbar vid felsökning, support eller nätverksinställningar.">
   <meta property="og:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
   <meta property="og:url" content="https://ip.weconnect.se">
