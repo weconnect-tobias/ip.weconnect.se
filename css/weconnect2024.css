@@ -152,112 +152,36 @@
       opacity: 0.8;
     }
 
-.tools p {
-	margin-left: 20px;
-	color: #000;
-	font-family: Georgia, serif;
-	-webkit-text-shadow: 0 0 0 #000;
-	-moz-text-shadow: 0 0 7px #000;
-	text-shadow: 0 0 0 #000
-}
-
-#ip-lookup {
-	border: 1px solid #aaa;
-	background-position: 50% 50%;
-	background-repeat: repeat-x;
-	background-color: #7777;
-	-webkit-border-radius: 11px;
-	-moz-border-radius: 10px;
-	border-radius: 11px;
-	-webkit-box-shadow: 0 0 7px #111;
-	-moz-box-shadow: 0 0 7px #111;
-	box-shadow: 0 0 7px #111;
-	text-align: center;
-	line-height: 40px;
-	height: 50px
-}
-
-#tools p {
-	font-size: 77px
-}
-
-#more p {
-	font-size: 24px
-}
-
-#more-info p {
-	font-size: 18px
-}
-
-#more-info ul {
-	margin: 20px 0 35px 50px;
-	font-size: 18px;
-	color: #000
-}
-
-#more-info li {
-	margin: 10px 0;
-	line-height: 25px;
-	font-family: Helvetica, Arial
-}
-
-/* Modern styling för info-listan */
-.info-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.info-list li {
-  background-color: #f8f8f8;  /* Ljus bakgrund för kontrast */
-  color: #333;              /* Mörk text för bra läsbarhet */
-  border-radius: 6px;
-  padding: 10px 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Gör så att ip-box fyller hela huvudsakliga content‑bredden */
+#main-content-white .ip-box {
+  width: 100%;            /* Tar hela tillgängliga bredden i containern */
+  max-width: 900px;       /* Samma max-bredd som #main-content-white */
+  margin: 20px 0;         /* Lite luft ovan/under */
+  
+  /* Mer “andrum” inuti */
+  padding: 20px 25px;
+  
+  /* Bakgrund & kant för kontrast */
+  background-color: #f0f4f8;    /* Ljust gråblå ton */
+  border: 1px solid #dde2e6;    /* Diskret kant */
+  border-radius: 8px;
+  
+  /* Starkare skugga för att lyfta upp boxen */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.info-list li:hover {
+/* Hover-effekt */
+#main-content-white .ip-box:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Styling på etikett och värde i varje listitem */
-.info-list .label {
-  font-weight: bold;
-  margin-right: 10px;
-  color: #0d1e55;  /* Använd din primära färg för etiketter */
-}
-
-.info-list .value {
-  font-family: 'Open Sans', sans-serif;
-}
-
-/* Styling för IPv4/IPv6-boxar med info-list-liknande utseende */
-.ip-box {
-  background-color: #f8f8f8;       /* Ljus bakgrund */
-  color: #333;                   /* Mörk text för läsbarhet */
-  border-radius: 6px;            /* Rundade hörn, matchar info-listan */
-  padding: 10px 15px;            /* Samma padding som i info-list li */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Samma skugga */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 100%;       /* fyll ut containerns bredd */
-  margin: 10px 0;    /* ge lite luft ovan/under */
-}
-
-.ip-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Texten i ip-boxen – större font så att den syns bättre */
-.ip-box h1 {
+/* Tydligare text */
+#main-content-white .ip-box h1 {
   margin: 0;
-  padding: 0;
-  font-size: 24px;     /* Ökad fontstorlek */
-  font-weight: bold;
-  color: #0d1e55;      /* Primärfärg för texten */
+  font-size: 1.5rem;        /* ca 24px–26px beroende på root‑font */
+  font-weight: 700;
+  color: #0d1e55;           /* Mörk primärfärg */
+  line-height: 1.2;
 }
