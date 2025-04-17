@@ -1,3 +1,10 @@
+  @font-face {
+    font-family: 'Baloo Da 2';
+    src: url('../fonts/BalooDa2-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
     * {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
