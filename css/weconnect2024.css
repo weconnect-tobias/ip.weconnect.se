@@ -263,17 +263,27 @@ footer a {
   }
 }
 
-#theme-toggle {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 6px;
+.ip-number {
   cursor: pointer;
-  font-size: 18px;
-  transition: background 0.3s, color 0.3s;
+  transition: color 0.3s;
+  position: relative;
+  text-decoration: underline dotted;
 }
 
-#theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
+/* När IP:n är kopierad – visuell feedback */
+.ip-number.copied {
+  color: #4caf50; /* Grön färg som feedback */
+}
+
+/* Valfritt: Lägg till ikon efter */
+.ip-number::after {
+  content: " 📋";
+  font-size: 0.9em;
+  margin-left: 8px;
+  opacity: 0.6;
+}
+
+.ip-number.copied::after {
+  content: " ✅";
+  opacity: 1;
 }

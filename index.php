@@ -84,7 +84,7 @@
 <!-- White Background Section -->
 <section id="main-content-white">
   <div class="ip-box">
-  <h1>Din IP-adress är: <span class="ip-number"><?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></span></h1>  </div>
+  <h1>Din IP-adress är: <span class="ip-number" id="ip-display" title="Klicka för att kopiera"><?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></span></h1>  </div>
 
   <div>
   <h2>Förklaring</h2>
@@ -113,6 +113,7 @@
     <a href="mailto:info@weconnect.se">info@weconnect.se</a>
   </div>
 </footer>
-<script src="js/theme-toggle.js"></script>
+
+<script src="js/copy-ip.js"></script>
 </body>
 </html>
