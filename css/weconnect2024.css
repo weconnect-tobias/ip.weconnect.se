@@ -1,191 +1,181 @@
-  @font-face {
-    font-family: 'Baloo Da 2';
-    src: url('../fonts/BalooDa2-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+@font-face {
+  font-family: 'Baloo Da 2';
+  src: url('../fonts/BalooDa2-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Baloo Da 2', 'Open Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== HEADER ========== */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  margin: 0;
+  border: none;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 10px 0;
+  z-index: 99;
+  border-radius: 4px;
+  min-width: 240px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  display: block;
+  padding: 8px 20px;
+}
+
+nav ul li ul li a {
+  color: white;
+  display: block;
+  text-align: left;
+}
+
+nav ul li ul li a:hover {
+  opacity: 0.8;
+}
+
+.icon-chevron {
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  vertical-align: middle;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive icon-chevron */
+@media (max-width: 600px) {
+  .icon-chevron {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
   }
-    * {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    }
+}
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Baloo Da 2', 'Open Sans', sans-serif;
-      color: #fff;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+/* ========== MAIN CONTENT - GRADIENT VERSION ========== */
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background: linear-gradient(135deg, #0d1e55, #9a007e);
+  margin: 0;
+  padding-top: 120px;
+  position: relative;
+}
 
-    /* Header placed above content with transparent background */
-    header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-      background: transparent;
-      margin: 0;
-      border: none;
-    }
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    header img {
-      height: 50px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      padding: 0;
-      margin: 0;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      transition: opacity 0.3s;
-    }
+#main-content > div {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
 
-    /* Main Content - Gradient Background Partial Height */
-    #main-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 400px;
-      background: linear-gradient(135deg, #0d1e55, #9a007e);
-      margin: 0;
-      padding-top: 120px;
-      position: relative;
-    }
-    #main-content > div {
-      padding: 40px 20px;
-      margin: 0 auto;
-      max-width: 900px;
-      width: 100%;
-      box-sizing: border-box;
-      text-align: center;
-    }
-    #main-content h1 {
-      font-size: 48px;
-    }
-    #main-content p {
-      font-size: 22px;
-    }
-    #main-content h2 {
-      font-size: 48px;
-      font-weight: 700;
-    }
+#main-content h1,
+#main-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
 
-    /* Main Content - White Background Version */
-    #main-content-white {
-      display: flex;
-      flex-direction: column;
-      /* ta bort align-items:center; eller skriv: */
-      align-items: stretch;
-      background: white;
-      color: black;
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-    #main-content-white h1 {
-      font-size: 36px;
-      color: #0d1e55;
-    }
-    #main-content-white p {
-      font-size: 18px;
-    }
+#main-content p {
+  font-size: 22px;
+}
 
-    /* Footer */
-    footer {
-      background-color: #0d1e55;
-      padding: 30px;
-      display: flex;
-      justify-content: space-around;
-      text-align: left;
-      flex-wrap: wrap;
-      margin-bottom: 0;
-      border: none;
-    }
-    .footer-section {
-      max-width: 300px;
-      margin: 10px;
-    }
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-      /* Dropdown Menu */
-    nav ul li {
-      position: relative;
-    }
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(6px);
-      padding: 10px 0;
-      z-index: 99;
-      border-radius: 4px;
-      min-width: 240px;
-    }
-    nav ul li:hover ul {
-      display: block;
-    }
-    nav ul li ul li {
-      display: block;
-      padding: 8px 20px;
-    }
-    nav ul li ul li a {
-      color: white;
-      display: block;
-      text-align: left;
-    }
-    nav ul li ul li a:hover {
-      opacity: 0.8;
-    }
+/* ========== MAIN CONTENT - WHITE VERSION ========== */
+#main-content-white {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: white;
+  color: black;
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
-    .icon-chevron {
-      width: 18px;             /* större storlek */
-      height: 18px;
-      margin-left: 6px;        /* lagom mellanrum från texten */
-      vertical-align: middle;  /* justera så den sitter rätt med text */
-      color: white;            /* påverkar fill="currentColor" */
-      transition: transform 0.3s ease; /* smidig rotation */
-    }
+#main-content-white h1 {
+  font-size: 36px;
+  color: #0d1e55;
+}
 
-    @media (max-width: 600px) {
-      .icon-chevron {
-        width: 16px;
-        height: 16px;
-        margin-left: 4px;
-      }
-    }
+#main-content-white p {
+  font-size: 18px;
+}
 
-/* IP‑boxen fyller hela ”content”-bredden och centrerar sig i containern */
+/* ========== IP-BOX ========== */
 #main-content-white .ip-box {
-  /* Gör boxen lika bred som hela containern (900px) */
-  width: calc(100% + 40px);   /* 100% innerbredd + 2×20px padding */
-  max-width: none;            /* Ta bort tidigare max-width */
-  margin: 20px -20px;         /* Flytta ut boxen under containerns padding */
-
-  /* Resten av din styling */
+  width: calc(100% + 40px);
+  max-width: none;
+  margin: 20px -20px;
   padding: 20px;
   background-color: #f0f4f8;
   border: 1px solid #dde2e6;
@@ -200,9 +190,75 @@
 }
 
 #main-content-white .ip-box h1 {
-  margin: 0;
   font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ip-number {
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
-  color: #0d1e55;
-  line-height: 1.2;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  color: #003366;
+  transition: color 0.3s ease;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #0d1e55;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  border: none;
+}
+
+.footer-section {
+  max-width: 300px;
+  margin: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ========== DARK MODE ========== */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #0e0e17;
+    color: #ffffff;
+  }
+
+  #main-content {
+    background: linear-gradient(135deg, #111835, #4c0054);
+  }
+
+  #main-content-white {
+    background-color: #1a1a2e;
+    color: #ffffff;
+  }
+
+  #main-content-white .ip-box {
+    background-color: #252542;
+    border-color: #33385b;
+  }
+
+  #main-content-white .ip-box h1,
+  .ip-number,
+  nav ul li a {
+    color: #ffffff;
+  }
+
+  nav ul li ul {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  footer {
+    background-color: #111835;
+  }
 }

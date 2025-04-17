@@ -83,8 +83,7 @@
 <!-- White Background Section -->
 <section id="main-content-white">
   <div class="ip-box">
-    <h1>Din IP Adress är: <?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></h1>
-  </div>
+  <h1>Din IP-adress är: <span class="ip-number"><?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></span></h1>  </div>
 
   <div>
   <h2>Förklaring</h2>
