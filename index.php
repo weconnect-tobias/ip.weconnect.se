@@ -18,7 +18,11 @@
     <nav>
   <ul>
     <li>
-    <a href="#">Tjänster <img src="img/icons/chevron-down-solid.svg" alt="" class="icon-chevron"></a>
+    <a href="#">Tjänster 
+    <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+    <path d="M96 192l64 64 64-64H96z"/>
+    </svg>
+    </a>
       <ul>
         <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
         <li><a href="https://weconnect.se/it-support/">IT-Support</a></li>
@@ -30,7 +34,11 @@
     </li>
     <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
     <li>
-      <a href="https://weconnect.se/kontakt/">Kontakt <img src="img/icons/chevron-down-solid.svg" alt="" class="icon-chevron"></a>
+      <a href="https://weconnect.se/kontakt/">Kontakt 
+      <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+      <path d="M96 192l64 64 64-64H96z"/>
+     </svg>
+      </a>
       <ul>
         <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
       </ul>

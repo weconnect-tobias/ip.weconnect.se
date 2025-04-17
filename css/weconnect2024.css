@@ -156,6 +156,7 @@
       height: auto;
       margin-left: 6px;
       vertical-align: middle;
+      fill: white;
     }
 
 /* IP‑boxen fyller hela ”content”-bredden och centrerar sig i containern */
