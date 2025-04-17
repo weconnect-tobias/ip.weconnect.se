@@ -77,7 +77,10 @@
     #main-content p {
       font-size: 22px;
     }
-
+    #main-content h2 {
+      font-size: 48px;
+      font-weight: 700;
+    }
 
     /* Main Content - White Background Version */
     #main-content-white {
