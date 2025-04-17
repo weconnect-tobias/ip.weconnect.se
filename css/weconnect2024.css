@@ -24,8 +24,6 @@
       background: transparent;
       margin: 0;
       border: none;
-      box-sizing: border-box;
-      font-weight: 600;
     }
     .header-container {
       max-width: 1200px;
