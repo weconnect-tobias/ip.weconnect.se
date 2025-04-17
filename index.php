@@ -66,19 +66,6 @@
   </div>
   <?php endif; ?>
 
-		<br>
-		<div id="more-info" class="tools">
-			<ul class="info-list">
-			<?php 
-				//echo '<li><strong>Remote Port:</strong> <span>'.$port.'</span></li>';
-				//echo '<li><strong>Request Method:</strong> <span>'.$method.'</span></li>';
-				//echo '<li><strong>Server Protocol:</strong> <span>'.$protocol.'</span></li>';
-				echo '<li><strong>Server Host:</strong> <span>'.$host.'</span></li>';
-				echo '<li><strong>User Agent:</strong> <span>'.$agent.'</span></li>';
-				if ($proxy) echo '<li><strong>Proxy: <span>'.($proxy) ? $proxy : ''.'</span></li>';
-
-			?>
-			</ul>
 </section>
 
 <footer style="margin-top: auto;">
