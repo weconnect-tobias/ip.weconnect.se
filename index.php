@@ -19,7 +19,7 @@
     <nav>
   <ul>
     <li>
-      <a href="#">Tjänster</a>
+    <a href="#">Tjänster <i class="fa-solid fa-chevron-down"></i></a>
       <ul>
         <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
         <li><a href="https://weconnect.se/it-support/">IT-Support</a></li>
@@ -31,7 +31,7 @@
     </li>
     <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
     <li>
-      <a href="https://weconnect.se/kontakt/">Kontakt</a>
+      <a href="https://weconnect.se/kontakt/">Kontakt <i class="fa-solid fa-chevron-down"></i></a>
       <ul>
         <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
       </ul>
