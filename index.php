@@ -3,18 +3,27 @@
 <html>
   <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>What's my IP dude!</title>
-	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vad är min IP-adress? | Se din publika IP – WeConnect</title>
+  <meta name="description" content="Se din publika IP-adress direkt på ip.weconnect.se – ingen inloggning, inga cookies, bara din aktuella IPv4- eller IPv6-adress. Perfekt vid IT-support eller nätverksfelsökning.">	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" href="img/icon-144x144-1.png" sizes="192x192" />
 	<link rel="apple-touch-icon" href="img/icon-144x144-1.png" />
 	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
 	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
+  <meta property="og:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
+  <meta property="og:description" content="Kolla din publika IP-adress snabbt och enkelt – ingen spårning, bara ren info. Användbar vid felsökning, support eller nätverksinställningar.">
+  <meta property="og:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
+  <meta property="og:url" content="https://ip.weconnect.se">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
+  <meta name="twitter:description" content="Din publika IP-adress direkt i webbläsaren. Enkel, gratis och utan spårning.">
+  <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
 </head>
 <body>
 
 <header>
   <div class="header-container">
-    <img src="img/WeConnect-Logo-White-350.png" alt="WeConnect Logo">
+    <img src="img/WeConnect-Logo-White-350.png" alt="WeConnect – IT-support och nätverk för småföretag">
     <nav>
   <ul>
     <li>
@@ -65,17 +74,19 @@
 
   <div>
   <h2>Förklaring</h2>
-  <p>
-    Den här sidan visar din publika IP-adress – alltså det "nummer" som identifierar din internetanslutning just nu.  
-    Du kan behöva den här informationen om du får hjälp av support, ska ställa in en nätverkstjänst eller bara är nyfiken.
-  </p>
+<p>
+  En IP-adress är som en "hemadress" för din internetanslutning. Den gör det möjligt för webbplatser och tjänster att veta var information ska skickas – lite som ett returadress-kuvert, fast digitalt.
+</p>
+<p>
+  Den här sidan visar vilken IP-adress du använder just nu, oavsett om det är en <strong>IPv4</strong>- eller <strong>IPv6</strong>-adress. Du kan behöva den här informationen om du får IT-support, felsöker nätverket eller ställer in en router.
+</p>
 </div>
 
 </section>
 
 <footer style="margin-top: auto;">
   <div class="footer-section">
-    <img src="img/WeConnect-Logo-White-350.png" alt="WeConnect Logo" height="40">
+    <img src="img/WeConnect-Logo-White-350.png" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" height="40">
   </div>
   <div class="footer-section">
     <strong>Adress Strömstad</strong><br>
