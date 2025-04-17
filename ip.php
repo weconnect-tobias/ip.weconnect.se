@@ -12,5 +12,5 @@ function getClientIP(): ?string {
     return null;
 }
 
-$ipv4 = getClientIP();  // supertyp: antingen IPv4 eller IPv6 beroende på vad REMOTE_ADDR är
+$ipaddress = getClientIP();  // supertyp: antingen IPv4 eller IPv6 beroende på vad REMOTE_ADDR är
 ?>
