@@ -70,7 +70,6 @@
   </ul>
 </nav>
   </div>
-  <button id="theme-toggle" aria-label="Byt tema">🌙 / ☀️</button>
 </header>
 
 <!-- Blended Gradient Section -->
