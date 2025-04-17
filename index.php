@@ -52,7 +52,7 @@
 
 <!-- White Background Section -->
 <section id="main-content-white">
-  <div class="tools ip-box">
+  <div class="ip-box">
     <h1>Din IP Adress: <?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></h1>
   </div>
 
