@@ -159,14 +159,13 @@
       color: white;            /* påverkar fill="currentColor" */
       transition: transform 0.3s ease; /* smidig rotation */
     }
-    
-    /* Alternativa storlekar om ni vill ha valmöjlighet */
-    .icon-chevron--small { width: 14px; height: 14px; }
-    .icon-chevron--large { width: 22px; height: 22px; }
-    
-    /* Roterad ikon vid hover (om det är en dropdown) */
-    nav ul li:hover > a .icon-chevron {
-      transform: rotate(180deg);
+
+    @media (max-width: 600px) {
+      .icon-chevron {
+        width: 16px;
+        height: 16px;
+        margin-left: 4px;
+      }
     }
 
 /* IP‑boxen fyller hela ”content”-bredden och centrerar sig i containern */
