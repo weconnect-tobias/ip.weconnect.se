@@ -153,34 +153,29 @@
 
 /* IP‑boxen fyller hela ”content”-bredden och centrerar sig i containern */
 #main-content-white .ip-box {
-  width: 100%;
-  max-width: 900px;          /* Samma som containerns max-bredd */
-  margin: 20px 0;            /* Luft ovan/under */
-  
-  /* Mer luft inuti */
+  /* Gör boxen lika bred som hela containern (900px) */
+  width: calc(100% + 40px);   /* 100% innerbredd + 2×20px padding */
+  max-width: none;            /* Ta bort tidigare max-width */
+  margin: 20px -20px;         /* Flytta ut boxen under containerns padding */
+
+  /* Resten av din styling */
   padding: 20px;
-  
-  /* Diskret bakgrund & kant */
-  background-color: #f0f4f8; /* Ljust gråblå ton */
+  background-color: #f0f4f8;
   border: 1px solid #dde2e6;
   border-radius: 8px;
-  
-  /* Skugga för ”kort”-effekt */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover‑effekt */
 #main-content-white .ip-box:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Själva texten – större och tydligare */
 #main-content-white .ip-box h1 {
   margin: 0;
-  font-size: 1.5rem;   /* ca 24px */
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #0d1e55;      /* Primärfärg */
+  color: #0d1e55;
   line-height: 1.2;
 }
