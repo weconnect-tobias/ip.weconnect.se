@@ -5,7 +5,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Vad är min IP-adress? | Se din publika IP – WeConnect</title>
   <meta name="description" content="Se din publika IP-adress direkt på ip.weconnect.se – ingen inloggning, inga cookies, bara din aktuella IPv4- eller IPv6-adress. Perfekt vid IT-support eller nätverksfelsökning.">	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" href="img/icon-144x144-1.png" sizes="192x192" />
+	<link rel="canonical" href="https://ip.weconnect.se/" />
+  <link rel="icon" href="img/icon-144x144-1.png" sizes="192x192" />
 	<link rel="apple-touch-icon" href="img/icon-144x144-1.png" />
 	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
 	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
@@ -18,6 +19,18 @@
   <meta name="twitter:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
   <meta name="twitter:description" content="Din publika IP-adress direkt i webbläsaren. Enkel, gratis och utan spårning.">
   <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
+
+  
+  <!-- Structured data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WeConnect IP-tjänst",
+    "url": "https://ip.weconnect.se",
+    "description": "Visa din aktuella publika IP-adress snabbt och säkert. Perfekt vid support och felsökning."
+  }
+  </script>
 </head>
 <body>
 
