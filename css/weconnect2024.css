@@ -262,3 +262,18 @@ footer a {
     background-color: #111835;
   }
 }
+
+#theme-toggle {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
