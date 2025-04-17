@@ -57,7 +57,7 @@
   </div>
 
   <div>
-  <h2>Vad är min IP-adress?</h2>
+  <h2>Förklaring</h2>
   <p>
     Den här sidan visar din publika IP-adress – alltså det "nummer" som identifierar din internetanslutning just nu.  
     Du kan behöva den här informationen om du får hjälp av support, ska ställa in en nätverkstjänst eller bara är nyfiken.
@@ -74,11 +74,6 @@
     <strong>Adress Strömstad</strong><br>
     Oslovägen 50<br>
     452 35 Strömstad
-  </div>
-  <div class="footer-section">
-    <strong>Adress Göteborg</strong><br>
-    Drottninggatan 38 3tr<br>
-    411 07 Göteborg
   </div>
   <div class="footer-section">
     <strong>Kontakt info</strong><br>
