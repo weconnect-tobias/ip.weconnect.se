@@ -106,7 +106,7 @@
   </div>
   <div class="footer-section">
     <strong>Kontakt info</strong><br>
-    <a href="tel:+4652666066">+46 526 66066</a><br>
+    <span id="phone"></span>
     <span id="email"></span>.</p>
   </div>
 </footer>
