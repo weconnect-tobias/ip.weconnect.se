@@ -4,6 +4,7 @@
   <head>
   <meta charset="UTF-8">
   <title>Vad är min IP-adress? | Snabb IP-check utan spårning – WeConnect</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
   <meta name="description" content="Kolla din publika IP-adress direkt – utan cookies, inloggning eller spårning. Perfekt för felsökning och IT-support.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://ip.weconnect.se/" />
@@ -24,17 +25,19 @@
   
   <!-- Structured data (Schema.org) -->
   <script type="application/ld+json">
-{
+  {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Vad är min IP-adress?",
-  "url": "https://ip.weconnect.se",
-  "description": "Visa din publika IP-adress direkt i webbläsaren – utan cookies, utan inloggning.",
+  "@type": "TechArticle",
+  "headline": "Vad är min IP-adress?",
+  "author": {
+    "@type": "Organization",
+    "name": "WeConnect Nordic AB"
+  },
   "publisher": {
     "@type": "Organization",
-    "name": "WeConnect Nordic AB",
-    "url": "https://weconnect.se"
-  }
+    "name": "WeConnect Nordic AB"
+  },
+  "datePublished": "2025-04-22"
 }
 </script>
 </head>
