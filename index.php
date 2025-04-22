@@ -36,7 +36,7 @@
 
 <header>
   <div class="header-container">
-    <img src="img/WeConnect-Logo-White-350.png" alt="WeConnect – IT-support och nätverk för småföretag">
+    <img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect – IT-support och nätverk för småföretag">
     <nav>
   <ul>
     <li>
@@ -97,7 +97,7 @@
 
 <footer style="margin-top: auto;">
   <div class="footer-section">
-    <img src="img/WeConnect-Logo-White-350.png" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" height="40">
+    <img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" height="40">
   </div>
   <div class="footer-section">
     <strong>Adress Strömstad</strong><br>
@@ -107,10 +107,11 @@
   <div class="footer-section">
     <strong>Kontakt info</strong><br>
     <a href="tel:+4652666066">+46 526 66066</a><br>
-    <a href="mailto:info@weconnect.se">info@weconnect.se</a>
+    <span id="email"></span>.</p>
   </div>
 </footer>
 
 <script src="js/copy-ip.js" defer></script>
+<script src="js/email-protect.js" defer></script>
 </body>
 </html>
