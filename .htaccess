@@ -1,16 +1,16 @@
 RewriteEngine On
-RewriteCond %{THE_REQUEST} /index\.php [NC]
-RewriteRule ^index\.php$ / [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\. [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://ip.weconnect.se/$1 [L,R=301]
 
 Options -Indexes
 
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType text/css "access plus 30 days"
-  ExpiresByType image/png "access plus 30 days"
-  ExpiresByType image/svg+xml "access plus 30 days"
-  ExpiresByType image/x-icon "access plus 30 days"
-  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 
 <IfModule mod_headers.c>

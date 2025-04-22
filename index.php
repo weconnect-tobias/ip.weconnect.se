@@ -6,6 +6,7 @@
 	<title>Vad är min IP-adress? | Se din publika IP – WeConnect</title>
   <meta name="description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <link rel="icon" href="img/icon-144x144-1.png" sizes="192x192" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://ip.weconnect.se/" />
   <meta name="seobility" content="df95fd8fec0aef960e98c9575023bef2">
 	<link rel="apple-touch-icon" href="img/icon-144x144-1.png" />
 	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
@@ -110,6 +111,6 @@
   </div>
 </footer>
 
-<script src="js/copy-ip.js"></script>
+<script src="js/copy-ip.js" defer></script>
 </body>
 </html>
