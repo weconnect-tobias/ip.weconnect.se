@@ -7,6 +7,7 @@
   <meta name="description" content="Se din publika IP-adress direkt på ip.weconnect.se – ingen inloggning, inga cookies, bara din aktuella IPv4- eller IPv6-adress. Perfekt vid IT-support eller nätverksfelsökning.">	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="canonical" href="https://ip.weconnect.se/" />
   <link rel="icon" href="img/icon-144x144-1.png" sizes="192x192" />
+  <meta name="seobility" content="df95fd8fec0aef960e98c9575023bef2">
 	<link rel="apple-touch-icon" href="img/icon-144x144-1.png" />
 	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
 	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
