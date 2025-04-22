@@ -49,7 +49,6 @@
         <li><a href="https://weconnect.se/it-support/">IT-Support</a></li>
         <li><a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
         <li><a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
-        <li><a href="https://weconnect.se/utveckling/">Utveckling</a></li>
         <li><a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
       </ul>
     </li>
