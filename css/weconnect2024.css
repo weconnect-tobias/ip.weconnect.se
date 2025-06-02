@@ -290,6 +290,31 @@ footer a {
     color: #ffffff;
   }
 
+  .margin-bottom-large {
+    margin-bottom: 1.5rem; /* Justera efter behov */
+  }
+  
+  /* Klass för centrerad text (motsvarar .text-center) */
+  .text-centered {
+    text-align: center;
+  }
+  
+  /* Grundläggande stil för listor för att säkerställa läsbarhet */
+  #main-content-white ul {
+    padding-left: 20px; /* Indrag för listpunkter */
+    margin-bottom: 1rem; /* Lite utrymme efter listan */
+  }
+  
+  #main-content-white ul li {
+    margin-bottom: 0.5rem; /* Lite utrymme mellan varje listpunkt */
+  }
+  
+  /* Stil för den mindre texten i slutet */
+  .site-footer-credit { /* Ny klass för den avslutande texten */
+    font-size: 0.9em;   /* Lite mindre text */
+    color: #555;       /* Mörkgrå färg, justera efter behov */
+  }
+
   nav ul li ul {
     background: rgba(255, 255, 255, 0.08);
   }
