@@ -4,7 +4,15 @@
   <head>
   <meta charset="UTF-8">
   <title>Vad är min IP-adress? | Snabb IP-check utan spårning – WeConnect</title>
-  <meta name="description" content="Hitta snabbt och enkelt din publika IP-adress (IPv4 eller IPv6) med vårt kostnadsfria IP-verktyg. Se din IP-plats och lär dig mer om IP-adresser.">  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
+  <meta name="description" content="Hitta snabbt och enkelt din publika IP-adress (IPv4 eller IPv6) med vårt kostnadsfria IP-verktyg. Se din IP-plats och lär dig mer om IP-adresser.">
+  <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' 'unsafe-inline'; 
+               style-src 'self' 'unsafe-inline'; 
+               img-src 'self' data: https:; 
+               font-src 'self';
+               connect-src 'self';">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://ip.weconnect.se/" />
   <meta name="seobility" content="df95fd8fec0aef960e98c9575023bef2">
@@ -22,6 +30,29 @@
   <meta name="twitter:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
   <meta name="twitter:description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
   
+  <!-- Resource hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" href="fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  <!-- Ytterligare meta för sökmotorer -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- Mobile meta -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="IP-adress">
+
+  <!-- Geo meta (om relevant) -->
+  <meta name="geo.region" content="SE">
+  <meta name="geo.placename" content="Sverige">
+
+  <!-- Språk alternativ om du planerar fler språk -->
+  <link rel="alternate" hreflang="sv" href="https://ip.weconnect.se/">
+  <link rel="alternate" hreflang="x-default" href="https://ip.weconnect.se/">
+
   <!-- Structured data (Schema.org) -->
   <script type="application/ld+json">
 {
@@ -78,6 +109,34 @@
     "@type": "Organization",
     "name": "WeConnect Nordic AB"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "WeConnect IP-tjänst",
+  "description": "Ett snabbt och enkelt verktyg för att se din publika IP-adress (IPv4/IPv6).",
+  "url": "https://ip.weconnect.se",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "WeConnect Nordic AB",
+    "url": "https://weconnect.se"
+  },
+  "featureList": [
+    "Visa IPv4-adress",
+    "Visa IPv6-adress", 
+    "Kopiera IP-adress",
+    "Ingen inloggning krävs",
+    "Inga cookies"
+  ]
 }
 </script>
 </head>
