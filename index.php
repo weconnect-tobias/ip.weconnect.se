@@ -8,20 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://ip.weconnect.se/" />
   <meta name="seobility" content="df95fd8fec0aef960e98c9575023bef2">
-	<link rel="apple-touch-icon" href="img/icon-144x144-1.png" />
-	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/img/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
   <meta name="theme-color" content="#0d1e55">
   <link rel="manifest" href="/site.webmanifest">
 	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
   <meta property="og:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
   <meta property="og:locale" content="sv_SE">
-  <meta property="og:description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <meta property="og:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.webp">
+  <meta property="og:description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <meta property="og:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
   <meta property="og:url" content="https://ip.weconnect.se">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
-  <meta name="twitter:description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.webp">
+  <meta name="twitter:description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
   
   <!-- Structured data (Schema.org) -->
   <script type="application/ld+json">
