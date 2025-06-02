@@ -12,6 +12,7 @@
 	<meta name="msapplication-TileImage" content="img/icon-144x144-1.png" />
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0d1e55">
+  <link rel="manifest" href="/site.webmanifest">
 	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
   <meta property="og:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
   <meta property="og:locale" content="sv_SE">
@@ -24,19 +25,60 @@
   
   <!-- Structured data (Schema.org) -->
   <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Vad är min IP-adress?",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vad är en IP-adress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En IP-adress är som en 'hemadress' för din internetanslutning. Den gör det möjligt för webbplatser och tjänster att veta var information ska skickas. Den identifierar din anslutning på internet så att data du begär kan hitta tillbaka till dig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Varför behöver jag veta min IP-adress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Du kan behöva din IP-adress för teknisk support, onlinespel, fjärråtkomst till din dator, inställningar för nätverksutrustning, för att förstå vilken geografisk data webbplatser ser om dig, eller för allmän säkerhetsmedvetenhet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad är skillnaden mellan IPv4 och IPv6?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IPv4 är en äldre standard med ett begränsat antal adresser. IPv6 är en nyare standard med ett nästan obegränsat antal adresser som infördes för att lösa bristen på IPv4-adresser och erbjuda tekniska förbättringar."
+      }
+    }
+  ],
   "author": {
     "@type": "Organization",
     "name": "WeConnect Nordic AB"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "WeConnect Nordic AB"
+    "name": "WeConnect Nordic AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ip.weconnect.se/img/WeConnect-Logo-White-350.png"
+    }
   },
-  "datePublished": "2025-04-22"
+  "datePublished": "2025-06-02"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "IP.WeConnect.se",
+  "url": "https://ip.weconnect.se/",
+  "author": {
+    "@type": "Organization",
+    "name": "WeConnect Nordic AB"
+  }
 }
 </script>
 </head>
@@ -44,8 +86,14 @@
 
 <header>
   <div class="header-container">
-    <img src="img/WeConnect-Logo-White-350.webp" loading="lazy" alt="WeConnect – IT-support och nätverk för småföretag">
-    <nav>
+  <a href="https://weconnect.se" target="_blank" rel="noopener noreferrer" aria-label="WeConnect Nordic AB Hemsida">
+  <picture>
+    <source srcset="/img/WeConnect-Logo-White-350.webp" type="image/webp">
+    <source srcset="/img/WeConnect-Logo-White-350.png" type="image/png">
+    <img src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" style="max-width: 250px; height: auto;">
+  </picture>
+</a>
+<nav>
   <ul>
     <li>
     <a href="#">Tjänster 
