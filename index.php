@@ -192,8 +192,7 @@
         <p  class="hero-subtitle">För små &amp; mellanstora företag</p>
       </div>
     </div>
-
-<main>
+    
 <main>
       <section id="main-content-white">
         <div class="ip-box">

@@ -1,62 +1,331 @@
-/* 2025‑06 patch – fixes IP-address visibility in dark‑mode */
-@font-face{font-family:'Baloo Da 2';src:url('/fonts/BalooDa2-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
-
-:root{
-  --wc-bg       : #ffffff;
-  --wc-bg-alt   : #f0f4f8;   /* << light IP‑box */
-  --wc-text     : #0d1e55;
-  --wc-accent   : #003366;
-  --wc-footer   : #0d1e55;
-  --wc-green    : #4caf50;
+@font-face {
+  font-family: 'Baloo Da 2';
+  src: url('../fonts/BalooDa2-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-@media(prefers-color-scheme:dark){
-  :root{
-    --wc-bg       : #1a1a2e;
-    --wc-bg-alt   : #252542; /* << dark IP‑box */
-    --wc-text     : #ffffff;
-    --wc-accent   : #4caf50; /* IP text */
-    --wc-footer   : #111835;
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Baloo Da 2', 'Open Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== HEADER ========== */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  margin: 0;
+  border: none;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 10px 0;
+  z-index: 99;
+  border-radius: 4px;
+  min-width: 240px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  display: block;
+  padding: 8px 20px;
+}
+
+nav ul li ul li a {
+  color: white;
+  display: block;
+  text-align: left;
+}
+
+nav ul li ul li a:hover {
+  opacity: 0.8;
+}
+
+.icon-chevron {
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  vertical-align: middle;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .icon-chevron {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
   }
 }
-*{box-sizing:border-box;}
-html,body{height:100%;margin:0;font-family:'Baloo Da 2','Open Sans',sans-serif;background:var(--wc-bg);color:var(--wc-text);overflow-x:hidden;text-align:center;}
-body{display:flex;flex-direction:column;}
 
-/* HEADER (unchanged) */
-header{position:absolute;top:0;left:0;width:100%;z-index:10;background:transparent;}
-.header-container{max-width:1200px;margin:0 auto;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
-nav ul{list-style:none;display:flex;gap:30px;padding:0;margin:0;}
-nav ul li{position:relative;}
-nav ul li a{color:#fff;text-decoration:none;font-size:16px;font-weight:bold;display:inline-flex;align-items:center;transition:opacity .3s;}
-nav ul li a:hover{opacity:.8;}
-.icon-chevron{width:18px;height:18px;margin-left:6px;}
-@media(max-width:600px){.icon-chevron{width:16px;height:16px;margin-left:4px;}}
-.dropdown{display:none;position:absolute;top:100%;left:0;background:rgba(0,0,0,.4);backdrop-filter:blur(6px);padding:10px 0;border-radius:4px;min-width:240px;z-index:99;}
-nav li.open>.dropdown{display:block;}
-nav li.open>a>.icon-chevron{transform:rotate(180deg);}
+/* Styr själva gradient-bakgrunden och höjden */
+.hero-gradient-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px; /* Behåller samma höjd som tidigare */
+  padding-top: 100px;  /* Utrymme för headern */
+  padding-bottom: 20px;
+  background: linear-gradient(135deg, #0d1e55, #9a007e);
+}
 
-/* HERO */
-.hero-gradient-area{display:flex;justify-content:center;align-items:center;min-height:400px;padding-top:100px;padding-bottom:20px;background:linear-gradient(135deg,#0d1e55,#9a007e);} 
-@media(prefers-color-scheme:dark){.hero-gradient-area{background:linear-gradient(135deg,#2e2e61,#6e1c7c);}}
-.hero-title{font-size:48px;font-weight:700;color:#fff;margin:0;}
-.hero-subtitle{font-size:22px;color:#fff;margin-top:.5em;}
+/* En container för texten */
+.hero-text {
+  padding: 20px;
+}
 
-/* MAIN CONTENT */
-#main-content-white{background:var(--wc-bg);color:var(--wc-text);padding:50px 20px;max-width:900px;margin:-80px auto 0;position:relative;z-index:2;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.12);}  
-#main-content-white h1{font-size:36px;color:var(--wc-text);}  
-#main-content-white p{font-size:18px;}
+/* Styla denna klass för att se ut EXAKT som er gamla H2 */
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
 
-/* IP‑BOX */
-.ip-box{width:calc(100% + 40px);margin:20px -20px;padding:20px;background:var(--wc-bg-alt);border:1px solid #dde2e6;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);transition:transform .2s,box-shadow .2s;}
-.ip-box:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15);}  
-.ip-number{font-family:'Courier New',Courier,monospace;font-weight:700;font-size:1.8rem;letter-spacing:.5px;color:var(--wc-accent);cursor:pointer;background:none;border:none;border-radius:4px;padding:2px 4px;text-decoration:underline dotted;}
-.ip-number.copied{color:var(--wc-green);}  
+/* Styla denna klass för att se ut EXAKT som er gamla P */
+.hero-subtitle {
+  font-size: 22px;
+  color: #fff;
+  margin-top: 0.5em; /* Lite avstånd från titeln */
+}
 
-/* FOOTER */
-footer{background:var(--wc-footer);padding:30px;display:flex;justify-content:space-around;text-align:left;flex-wrap:wrap;flex-shrink:0;}
-.footer-section{max-width:300px;margin:10px;}
-footer a{color:#fff;text-decoration:none;}
-footer a:hover{opacity:.8;}
+/* Säkerställ att den vita innehållsboxen ligger rätt */
+#main-content-white {
+  background: white;
+  color: black;
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: -80px auto 0 auto; /* Negativ marginal för att den ska överlappa gradienten snyggt */
+  position: relative; /* Krävs för att den ska ligga ovanpå */
+  z-index: 2;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
 
-/* ACCESSIBILITY */
-@media(prefers-reduced-motion:reduce){*{transition:none!important;} .ip-box:hover{transform:none;}}
+#main-content-white h1 {
+  font-size: 36px;
+  color: #0d1e55;
+}
+
+#main-content-white p {
+  font-size: 18px;
+}
+
+/* ========== IP-BOX ========== */
+#main-content-white .ip-box {
+  width: calc(100% + 40px);
+  max-width: none;
+  margin: 20px -20px;
+  padding: 20px;
+  background-color: #252542;
+  border: 1px solid #dde2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#main-content-white .ip-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+#main-content-white .ip-box h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ip-number {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;           /* ärv typsnittet */
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;           /* ersätts av egen fokusring nedan */
+}
+
+.ip-number:focus-visible {
+  outline: 2px solid #4caf50; /* brand-grön fokusring, WCAG-godkänd kontrast */
+  outline-offset: 2px;
+}
+
+.ip-number:hover { opacity: .85; }
+.ip-number:active { transform: scale(.97); }
+
+.ip-number.copied {
+  color: #4caf50;
+}
+
+.ip-number::after {
+  content: " 📋";
+  font-size: 0.9em;
+  margin-left: 8px;
+  opacity: 0.6;
+}
+
+.ip-number.copied::after {
+  content: " ✅";
+  opacity: 1;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #0d1e55;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  border: none;
+  flex-shrink: 0;
+}
+
+.footer-section {
+  max-width: 300px;
+  margin: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ========== DARK MODE ========== */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+  }
+
+  #main-content {
+    background: linear-gradient(135deg, #2e2e61, #6e1c7c);
+  }
+
+  #main-content-white {
+    flex: 1;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertikalt */
+    align-items: center;      /* Horisontellt */
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  #main-content-white .ip-box {
+    background-color: #252542;
+    border-color: #33385b;
+  }
+
+  #main-content-white .ip-box h1,
+  .ip-number,
+  nav ul li a {
+    color: #ffffff;
+  }
+
+  .margin-bottom-large {
+    margin-bottom: 1.5rem; /* Justera efter behov */
+  }
+  
+  /* Klass för centrerad text (motsvarar .text-center) */
+  .text-centered {
+    text-align: center;
+  }
+  
+  /* Grundläggande stil för listor för att säkerställa läsbarhet */
+  #main-content-white ul {
+    padding-left: 20px; /* Indrag för listpunkter */
+    margin-bottom: 1rem; /* Lite utrymme efter listan */
+  }
+  
+  #main-content-white ul li {
+    margin-bottom: 0.5rem; /* Lite utrymme mellan varje listpunkt */
+  }
+  
+  /* Stil för den mindre texten i slutet */
+  .site-footer-credit { /* Ny klass för den avslutande texten */
+    font-size: 0.9em;   /* Lite mindre text */
+    color: #555;       /* Mörkgrå färg, justera efter behov */
+  }
+
+  nav ul li ul {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  footer {
+    background-color: #111835;
+  }
+}
