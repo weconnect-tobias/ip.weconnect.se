@@ -29,7 +29,7 @@
   <link rel="manifest"         href="/site.webmanifest">
 
   <!-- Main stylesheet -->
-  <link rel="stylesheet" type="text/css" href="css/weconnect2025.css">
+  <link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
 
   <meta property="og:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
   <meta property="og:locale" content="sv_SE">
