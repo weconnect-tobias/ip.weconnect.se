@@ -9,10 +9,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Dynamisk färg i adressfältet (PWA) -->
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0d1e55">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#111835">
-
   <!-- Preloads -->
   <link rel="preload" href="/fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
