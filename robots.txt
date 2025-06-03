@@ -8,5 +8,6 @@ Disallow: /fonts/
 Allow: /css/weconnect2024.css
 Allow: /js/copy-ip.js
 Allow: /js/email-protect.js
+Allow: /js/dropdown.js
 
 Sitemap: https://ip.weconnect.se/sitemap.xml

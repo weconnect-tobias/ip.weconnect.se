@@ -5,22 +5,32 @@
   <meta charset="UTF-8">
   <title>Vad är min IP-adress? | Snabb IP-check utan spårning – WeConnect</title>
   <meta name="description" content="Hitta snabbt och enkelt din publika IP-adress (IPv4 eller IPv6) med vårt kostnadsfria IP-verktyg. Se din IP-plats och lär dig mer om IP-adresser.">
-  <meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               script-src 'self' 'unsafe-inline'; 
-               style-src 'self' 'unsafe-inline'; 
-               img-src 'self' data: https:; 
-               font-src 'self';
-               connect-src 'self';">
-  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Dynamisk färg i adressfältet (PWA) -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0d1e55">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#111835">
+
+  <!-- Preloads -->
+  <link rel="preload" href="/fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="canonical" href="https://ip.weconnect.se/" />
   <meta name="seobility" content="df95fd8fec0aef960e98c9575023bef2">
-  <link rel="icon" href="/img/icon-192.png" type="image/png">
+	
+  <!-- Dynamisk färg i adressfältet (PWA) -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0d1e55">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#111835">
+
+  <!-- Favicons & manifest -->
+  <link rel="icon"             href="/img/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
-  <meta name="theme-color" content="#0d1e55">
-  <link rel="manifest" href="/site.webmanifest">
-	<link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
+  <link rel="manifest"         href="/site.webmanifest">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/weconnect2025.css">
+
   <meta property="og:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
   <meta property="og:locale" content="sv_SE">
   <meta property="og:description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <meta property="og:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
@@ -143,60 +153,60 @@
 <body>
 
 <header>
-  <div class="header-container">
-  <a href="https://weconnect.se" target="_blank" rel="noopener noreferrer" aria-label="WeConnect Nordic AB Hemsida">
-  <picture>
-    <source srcset="/img/WeConnect-Logo-White-350.webp" type="image/webp">
-    <source srcset="/img/WeConnect-Logo-White-350.png" type="image/png">
-    <img src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" style="max-width: 250px; height: auto;">
-  </picture>
-</a>
-<nav>
-  <ul>
-    <li>
-    <a href="#">Tjänster 
-    <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false">
-      <path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/>
-    </svg>
-    </a>
-      <ul>
-        <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
-        <li><a href="https://weconnect.se/it-support/">IT-Support</a></li>
-        <li><a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
-        <li><a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
-        <li><a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
-      </ul>
-    </li>
-    <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
-    <li>
-      <a href="https://weconnect.se/kontakt/">Kontakt 
-      <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false">
-      <path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/>
-    </svg>
-      </a>
-      <ul>
-        <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
-      </ul>
-    </li>
-    <li><a href="https://123support.se">Fjärrsupport</a></li>
-  </ul>
-</nav>
-  </div>
+      <div class="header-container">
+        <a href="https://weconnect.se" target="_blank" rel="noopener noreferrer" aria-label="WeConnect Nordic AB Hemsida">
+          <picture>
+            <source srcset="/img/WeConnect-Logo-White-350.webp" type="image/webp">
+            <source srcset="/img/WeConnect-Logo-White-350.png"  type="image/png">
+            <img src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" loading="lazy" decoding="async" style="max-width:250px;height:auto;">
+          </picture>
+        </a>
+        <nav aria-label="Huvudmeny">
+          <ul>
+            <li>
+              <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Tjänster
+                <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
+              </a>
+              <ul class="dropdown" role="menu">
+                <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
+                <li><a href="https://weconnect.se/it-support/">IT‑Support</a></li>
+                <li><a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
+                <li><a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
+                <li><a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
+              </ul>
+            </li>
+            <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
+            <li>
+              <a href="https://weconnect.se/kontakt/" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Kontakt
+                <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
+              </a>
+              <ul class="dropdown" role="menu">
+                <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
+              </ul>
+            </li>
+            <li><a href="https://123support.se">Fjärrsupport</a></li>
+          </ul>
+        </nav>
+      </div>
 </header>
 
-<!-- Blended Gradient Section -->
-<main id="main-content">
-  <div>
-    <h2>IT support & lösningar</h2>
-    <p>För små & mellanstora företag</p>
-  </div>
-</main>
+<div class="hero-gradient-area" role="banner">
+      <div class="hero-text">
+        <h2 class="hero-title">IT support &amp; lösningar</h2>
+        <p  class="hero-subtitle">För små &amp; mellanstora företag</p>
+      </div>
+    </div>
 
-<!-- White Background Section -->
-<section id="main-content-white">
-  <div class="ip-box">
-    <h1>Din IP-adress är: <span class="ip-number" id="ip-display" title="Klicka för att kopiera"><?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></span></h1>
-  </div>
+<main>
+<main>
+      <section id="main-content-white">
+        <div class="ip-box">
+          <h1>Din IP‑adress är&nbsp;
+            <button id="ip-display" class="ip-number" aria-label="Kopiera IP-adress" data-ip="<?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>">
+              <?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>
+            </button>
+          </h1>
+        </div>
 
   <div>
     <h2>Vad är en IP-adress? (Förklaring)</h2> <p>
@@ -238,7 +248,7 @@
   </div>
 
 </section>
-
+</main>
 <footer style="margin-top: auto;">
   <div class="footer-section">
     <img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" height="40">
@@ -255,7 +265,9 @@
   </div>
 </footer>
 
-<script src="js/copy-ip.js" defer></script>
-<script src="js/email-protect.js" defer></script>
+  <!-- JS‑bundle -->
+  <script src="/js/copy-ip.js"     defer></script>
+  <script src="/js/email-protect.js" defer></script>
+  <script src="/js/dropdown.js"   defer></script>
 </body>
 </html>

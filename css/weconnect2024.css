@@ -122,50 +122,49 @@ nav ul li ul li a:hover {
   }
 }
 
-/* ========== MAIN CONTENT - Gradient Header Area (optional) ========== */
-#main-content {
+/* Styr själva gradient-bakgrunden och höjden */
+.hero-gradient-area {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
+  min-height: 400px; /* Behåller samma höjd som tidigare */
+  padding-top: 100px;  /* Utrymme för headern */
+  padding-bottom: 20px;
   background: linear-gradient(135deg, #0d1e55, #9a007e);
-  margin: 0;
-  padding-top: 120px;
-  position: relative;
 }
 
-#main-content > div {
-  padding: 40px 20px;
-  margin: 0 auto;
-  max-width: 900px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
+/* En container för texten */
+.hero-text {
+  padding: 20px;
 }
 
-#main-content h1,
-#main-content h2 {
+/* Styla denna klass för att se ut EXAKT som er gamla H2 */
+.hero-title {
   font-size: 48px;
   font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-#main-content p {
+/* Styla denna klass för att se ut EXAKT som er gamla P */
+.hero-subtitle {
   font-size: 22px;
+  color: #fff;
+  margin-top: 0.5em; /* Lite avstånd från titeln */
 }
 
-/* ========== WHITE CONTENT BLOCK ========== */
+/* Säkerställ att den vita innehållsboxen ligger rätt */
 #main-content-white {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Vertikal centrering */
-  align-items: center;     /* Horisontell centrering */
   background: white;
   color: black;
   padding: 50px 20px;
   max-width: 900px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  margin: -80px auto 0 auto; /* Negativ marginal för att den ska överlappa gradienten snyggt */
+  position: relative; /* Krävs för att den ska ligga ovanpå */
+  z-index: 2;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 #main-content-white h1 {
