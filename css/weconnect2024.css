@@ -286,8 +286,8 @@ footer a {
   #main-content-white .ip-box h1,
   .ip-number,
   nav ul li a {
-    color: #ffffff;
-  }
+  /*  color: #ffffff;
+  } */
 
   .margin-bottom-large {
     margin-bottom: 1.5rem; /* Justera efter behov */
