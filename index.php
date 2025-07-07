@@ -145,6 +145,27 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WeConnect",
+      "item": "https://weconnect.se"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "IP-tjänst",
+      "item": "https://ip.weconnect.se"
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 

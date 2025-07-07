@@ -1,0 +1,33 @@
+{
+  "title": "Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect",
+  "description": "Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.",
+  "ipv4_example": "192.0.2.1",
+  "ipv6_example": "2001:db8::1",
+  "uses": [
+    "Teknisk support vid felsökning av din uppkoppling",
+    "Onlinespel – för att ansluta till servrar eller hosta spel",
+    "Fjärråtkomst till din dator eller andra enheter på nätverket",
+    "Konfigurering av brandväggar, routrar och annan nätverksutrustning",
+    "Geografisk anpassning av innehåll, t.ex. lokala nyheter och väder",
+    "Ökad medvetenhet om din säkerhet och integritet online"
+  ],
+  "faq": [
+    {
+      "question": "Hur ser jag min IP‑adress på mobilen?",
+      "answer": "Besök ip.weconnect.se i din mobilwebbläsare – verktyget visar automatiskt din publika IP‑adress, oavsett om du är ansluten via wifi eller mobilnät."
+    },
+    {
+      "question": "Är min IP‑adress statisk eller dynamisk?",
+      "answer": "De flesta privatkunder får en dynamisk IP som kan ändras när du startar om routern. Vill du veta säkert, kontakta din internetleverantör."
+    },
+    {
+      "question": "Hur skyddar jag min IP‑adress från spårning?",
+      "answer": "Du kan använda en VPN‑tjänst, proxyserver eller Tor för att dölja din IP och öka din integritet online."
+    }
+  ],
+  "provider": {
+    "name": "WeConnect Nordic AB",
+    "url": "https://weconnect.se"
+  },
+  "updated": "2025-07-07"
+}
