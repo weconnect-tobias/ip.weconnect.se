@@ -1,10 +1,10 @@
 <?php include __DIR__ . '/ip.php'; ?>
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv-SE">
   <head>
   <meta charset="UTF-8">
-  <title>Vad är min IP-adress? | Snabb IP-check utan spårning – WeConnect</title>
-  <meta name="description" content="Hitta snabbt och enkelt din publika IP-adress (IPv4 eller IPv6) med vårt kostnadsfria IP-verktyg. Se din IP-plats och lär dig mer om IP-adresser.">
+  <title>Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect</title>
+  <meta name="description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,14 +27,14 @@
   <!-- Main stylesheet -->
   <link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
 
-  <meta property="og:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
+  <meta property="og:title" content="Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect">
   <meta property="og:locale" content="sv_SE">
-  <meta property="og:description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <meta property="og:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
+  <meta property="og:description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">  <meta property="og:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
   <meta property="og:url" content="https://ip.weconnect.se">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Vad är min IP-adress? | WeConnect IP-tjänst">
-  <meta name="twitter:description" content="Visa din publika IPv4- eller IPv6-adress direkt på ip.weconnect.se – inga cookies, ingen inloggning. Perfekt för felsökning eller support.">  <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
+  <meta name="twitter:title" content="Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect">
+  <meta name="twitter:description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">  <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
   
   <!-- Resource hints -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -65,30 +65,30 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Vad är en IP-adress?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En IP-adress är som en 'hemadress' för din internetanslutning. Den gör det möjligt för webbplatser och tjänster att veta var information ska skickas. Den identifierar din anslutning på internet så att data du begär kan hitta tillbaka till dig."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Varför behöver jag veta min IP-adress?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Du kan behöva din IP-adress för teknisk support, onlinespel, fjärråtkomst till din dator, inställningar för nätverksutrustning, för att förstå vilken geografisk data webbplatser ser om dig, eller för allmän säkerhetsmedvetenhet."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Vad är skillnaden mellan IPv4 och IPv6?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "IPv4 är en äldre standard med ett begränsat antal adresser. IPv6 är en nyare standard med ett nästan obegränsat antal adresser som infördes för att lösa bristen på IPv4-adresser och erbjuda tekniska förbättringar."
-      }
-    }
+  {
+  "@type": "Question",
+  "name": "Hur ser jag min IP‑adress på mobilen?",
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Besök ip.weconnect.se i din mobilwebbläsare – verktyget visar automatiskt din publika IP‑adress, oavsett om du är ansluten via wifi eller mobilnät."
+  }
+},
+{
+  "@type": "Question",
+  "name": "Är min IP‑adress statisk eller dynamisk?",
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "De flesta privatkunder får en dynamisk IP som kan ändras när du startar om routern. Vill du veta säkert, kontakta din internetleverantör."
+  }
+},
+{
+  "@type": "Question",
+  "name": "Hur skyddar jag min IP‑adress från spårning?",
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Du kan använda en VPN‑tjänst, proxyserver eller Tor för att dölja din IP och öka din integritet online."
+  }
+}
   ],
   "author": {
     "@type": "Organization",
@@ -212,42 +212,59 @@
         </div>
 
   <div>
-    <h2>Vad är en IP-adress? (Förklaring)</h2> <p>
-      En IP-adress är som en "hemadress" för din internetanslutning. Den gör det möjligt för webbplatser och tjänster att veta var information ska skickas – lite som ett returadress-kuvert, fast digitalt. Den identifierar din anslutning på internet så att data du begär (som denna webbsida) kan hitta tillbaka till dig.
-    </p>
-    <p>
-      Den här sidan visar vilken publik IP-adress du använder just nu för att kommunicera med internet, oavsett om det är en <strong>IPv4</strong>- eller <strong>IPv6</strong>-adress. Denna information kan vara användbar i flera situationer, exempelvis vid IT-support, nätverksfelsökning eller konfigurering av en router.
-    </p>
+    <h2>Vad är en IP-adress? (Förklaring)</h2>
+    <p>En IP-adress är som en "hemadress" för din internetanslutning. Den gör det möjligt för webbplatser och tjänster att veta var information ska skickas – lite som ett returadress-kuvert, fast digitalt. Den identifierar din anslutning på internet så att data du begär (som denna webbsida) kan hitta tillbaka till dig.</p>
+    <p>Den här sidan visar vilken publik IP-adress du använder just nu för att kommunicera med internet, oavsett om det är en <strong>IPv4</strong>- eller <strong>IPv6</strong>-adress. Denna information kan vara användbar i flera situationer, exempelvis vid IT-support, nätverksfelsökning eller konfigurering av en router.</p>
   </div>
 
-  <hr class="my-4"> <div class="mt-4"> <h2>Varför behöver jag veta min IP-adress?</h2>
+  <hr class="my-4">
+  <div class="mt-4">
+    <h2>Varför behöver jag veta min IP-adress?</h2>
     <p>Att känna till din IP-adress kan vara viktigt i olika sammanhang:</p>
     <ul>
-      <li><strong>Teknisk support:</strong> När du kontaktar IT-support kan de be om din IP-adress för att lättare kunna felsöka problem med din anslutning.</li>
-      <li><strong>Onlinespel:</strong> Vissa onlinespel kan kräva din IP-adress för att du ska kunna ansluta till spelservrar eller vara värd för ett eget spel.</li>
-      <li><strong>Fjärråtkomst:</strong> Om du vill ansluta till din hemdator eller andra enheter på distans (t.ex. via Remote Desktop eller SSH) behöver du ofta känna till din publika IP-adress.</li>
-      <li><strong>Inställningar för nätverksutrustning:</strong> Vid konfigurering av brandväggar, routrar eller annan nätverksutrustning.</li>
-      <li><strong>Geografisk positionering:</strong> Webbplatser och tjänster kan använda din IP-adress för att anpassa innehåll baserat på din ungefärliga geografiska plats (t.ex. visa lokala nyheter eller väder).</li>
-      <li><strong>Säkerhetsmedvetenhet:</strong> För att förstå vilken information du delar och för att kunna identifiera eventuell ovanlig aktivitet kopplad till din IP-adress.</li>
+      <li><h3>Teknisk support:</h3> När du kontaktar IT-support kan de be om din IP-adress för att lättare kunna felsöka problem med din anslutning.</li>
+      <li><h3>Onlinespel:</h3> Vissa onlinespel kan kräva din IP-adress för att du ska kunna ansluta till spelservrar eller vara värd för ett eget spel.</li>
+      <li><h3>Fjärråtkomst:</h3> Om du vill ansluta till din hemdator eller andra enheter på distans (t.ex. via Remote Desktop eller SSH) behöver du ofta känna till din publika IP-adress.</li>
+      <li><h3>Inställningar för nätverksutrustning:</h3> Vid konfigurering av brandväggar, routrar eller annan nätverksutrustning.</li>
+      <li><h3>Geografisk positionering:</h3> Webbplatser och tjänster kan använda din IP-adress för att anpassa innehåll baserat på din ungefärliga geografiska plats (t.ex. visa lokala nyheter eller väder).</li>
+      <li><h3>Säkerhetsmedvetenhet:</h3> För att förstå vilken information du delar och för att kunna identifiera eventuell ovanlig aktivitet kopplad till din IP-adress.</li>
     </ul>
   </div>
 
-  <hr class="my-4"> <div class="mt-4">
+  <hr class="my-4">
+  <div class="mt-4">
     <h2>IPv4 kontra IPv6</h2>
-    <p>
-      Internet använder huvudsakligen två typer av IP-adresser: IPv4 och IPv6.
-    </p>
+    <p>Internet använder huvudsakligen två typer av IP-adresser: IPv4 och IPv6.</p>
     <ul>
       <li><strong>IPv4 (Internet Protocol version 4):</strong> Detta är den äldre standarden och representeras oftast som fyra sifferblock separerade med punkter (t.ex. <code>192.0.2.1</code>). Antalet tillgängliga IPv4-adresser börjar ta slut.</li>
       <li><strong>IPv6 (Internet Protocol version 6):</strong> Detta är en nyare standard som infördes för att lösa bristen på IPv4-adresser. IPv6-adresser är längre och skrivs med hexadecimala siffror och kolon (t.ex. <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>). IPv6 erbjuder ett nästan obegränsat antal adresser och andra tekniska förbättringar.</li>
     </ul>
-    <p>
-      Vårt verktyg visar automatiskt vilken typ av publik IP-adress (IPv4 eller IPv6) ditt nätverk för närvarande använder för att ansluta till internet. Allt fler internetleverantörer och webbplatser stöder nu IPv6.
-    </p>
+    <p>Vårt verktyg visar automatiskt vilken typ av publik IP-adress (IPv4 eller IPv6) ditt nätverk för närvarande använder för att ansluta till internet. Allt fler internetleverantörer och webbplatser stöder nu IPv6.</p>
   </div>
 
+  <hr class="my-4">
+  <div class="mt-4">
+    <h2>Vanliga frågor om IP‑adresser</h2>
+
+    <h3>Hur ser jag min IP‑adress på mobilen?</h3>
+    <p>Besök <strong>ip.weconnect.se</strong> i din mobilwebbläsare – verktyget visar automatiskt din publika IP‑adress, oavsett om du är ansluten via wifi eller mobilnät.</p>
+
+    <h3>Är min IP‑adress statisk eller dynamisk?</h3>
+    <p>De flesta privatkunder får en dynamisk IP som kan ändras när du startar om routern. Vill du veta säkert, kontakta din internetleverantör.</p>
+
+    <h3>Hur skyddar jag min IP‑adress från spårning?</h3>
+    <p>Du kan använda en VPN‑tjänst, proxyserver eller Tor för att dölja din IP och öka din integritet online.</p>
+  </div>
+
+  <hr class="my-4">
+  <section class="ip-seo-copy mt-4">
+    <h2>Fler tips om din IP‑adress</h2>
+    <p>Att förstå din <strong>publika IP‑adress</strong> är första steget mot en säker och stabil uppkoppling. Med vårt verktyg ser du både <strong>IPv4</strong> och <strong>IPv6</strong> – utan cookies eller inloggning. Perfekt för <a href="https://weconnect.se/it-support/">IT‑support</a>, <a href="https://weconnect.se/natverk-wifi/">nätverkskontroll</a> och felsökning.</p>
+    <p>Behöver du hjälp att säkra din anslutning eller sätta upp en statisk IP? Kontakta oss på WeConnect för skräddarsydda <a href="https://weconnect.se/sakert-natverk/">nätverkslösningar</a>.</p>
+  </section>
+
   <div class="text-center mt-5 mb-4">
-      <p><small>IP.weconnect.se - Ditt snabba och enkla verktyg för att se din IP-adress.</small></p>
+    <p><small>IP.weconnect.se - Ditt snabba och enkla verktyg för att se din IP-adress.</small></p>
   </div>
 
 </section>
