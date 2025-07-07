@@ -213,33 +213,33 @@
 
   <div>
     <h2>Vad är en IP-adress? (Förklaring)</h2>
-    <p>En IP-adress är som en "hemadress" för din internetanslutning. Den gör det möjligt för webbplatser och tjänster att veta var information ska skickas – lite som ett returadress-kuvert, fast digitalt. Den identifierar din anslutning på internet så att data du begär (som denna webbsida) kan hitta tillbaka till dig.</p>
-    <p>Den här sidan visar vilken publik IP-adress du använder just nu för att kommunicera med internet, oavsett om det är en <strong>IPv4</strong>- eller <strong>IPv6</strong>-adress. Denna information kan vara användbar i flera situationer, exempelvis vid IT-support, nätverksfelsökning eller konfigurering av en router.</p>
+    <p>En IP-adress är som en "hemadress" för din internetanslutning. Den gör det möjligt för webbplatser och tjänster att veta var information ska skickas – lite som ett returadress‑kuvert, fast digitalt. Den identifierar din anslutning på internet så att data du begär (som denna webbsida) kan hitta tillbaka till dig.</p>
+    <p>Den här sidan visar vilken publik IP‑adress du använder just nu för att kommunicera med internet, oavsett om det är en <strong>IPv4</strong>- eller <strong>IPv6</strong>-adress. Denna information kan vara användbar i flera situationer, exempelvis vid IT‑support, nätverksfelsökning eller konfigurering av en router.</p>
   </div>
 
   <hr class="my-4">
   <div class="mt-4">
-    <h2>Varför behöver jag veta min IP-adress?</h2>
-    <p>Att känna till din IP-adress kan vara viktigt i olika sammanhang:</p>
+    <h2>Användningsområden för din IP‑adress</h2>
+    <p>Att känna till din publika IP‑adress är viktigt i många situationer, bland annat:</p>
     <ul>
-      <li><h3>Teknisk support:</h3> När du kontaktar IT-support kan de be om din IP-adress för att lättare kunna felsöka problem med din anslutning.</li>
-      <li><h3>Onlinespel:</h3> Vissa onlinespel kan kräva din IP-adress för att du ska kunna ansluta till spelservrar eller vara värd för ett eget spel.</li>
-      <li><h3>Fjärråtkomst:</h3> Om du vill ansluta till din hemdator eller andra enheter på distans (t.ex. via Remote Desktop eller SSH) behöver du ofta känna till din publika IP-adress.</li>
-      <li><h3>Inställningar för nätverksutrustning:</h3> Vid konfigurering av brandväggar, routrar eller annan nätverksutrustning.</li>
-      <li><h3>Geografisk positionering:</h3> Webbplatser och tjänster kan använda din IP-adress för att anpassa innehåll baserat på din ungefärliga geografiska plats (t.ex. visa lokala nyheter eller väder).</li>
-      <li><h3>Säkerhetsmedvetenhet:</h3> För att förstå vilken information du delar och för att kunna identifiera eventuell ovanlig aktivitet kopplad till din IP-adress.</li>
+      <li>Teknisk support vid felsökning av din uppkoppling.</li>
+      <li>Onlinespel – för att ansluta till servrar eller hosta spel.</li>
+      <li>Fjärråtkomst till din dator eller andra enheter på nätverket.</li>
+      <li>Konfigurering av brandväggar, routrar och annan nätverksutrustning.</li>
+      <li>Geografisk anpassning av innehåll, t.ex. lokala nyheter och väder.</li>
+      <li>Ökad medvetenhet om din säkerhet och integritet online.</li>
     </ul>
   </div>
 
   <hr class="my-4">
   <div class="mt-4">
     <h2>IPv4 kontra IPv6</h2>
-    <p>Internet använder huvudsakligen två typer av IP-adresser: IPv4 och IPv6.</p>
+    <p>Internet använder huvudsakligen två typer av IP‑adresser: IPv4 och IPv6.</p>
     <ul>
-      <li><strong>IPv4 (Internet Protocol version 4):</strong> Detta är den äldre standarden och representeras oftast som fyra sifferblock separerade med punkter (t.ex. <code>192.0.2.1</code>). Antalet tillgängliga IPv4-adresser börjar ta slut.</li>
-      <li><strong>IPv6 (Internet Protocol version 6):</strong> Detta är en nyare standard som infördes för att lösa bristen på IPv4-adresser. IPv6-adresser är längre och skrivs med hexadecimala siffror och kolon (t.ex. <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>). IPv6 erbjuder ett nästan obegränsat antal adresser och andra tekniska förbättringar.</li>
+      <li><strong>IPv4 (Internet Protocol version 4):</strong> Detta är den äldre standarden och representeras oftast som fyra sifferblock separerade med punkter (t.ex. <code>192.0.2.1</code>). Antalet tillgängliga IPv4‑adresser börjar ta slut.</li>
+      <li><strong>IPv6 (Internet Protocol version 6):</strong> Detta är en nyare standard som infördes för att lösa bristen på IPv4‑adresser. IPv6‑adresser är längre och skrivs med hexadecimala siffror och kolon (t.ex. <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>). IPv6 erbjuder ett nästan obegränsat antal adresser och andra tekniska förbättringar.</li>
     </ul>
-    <p>Vårt verktyg visar automatiskt vilken typ av publik IP-adress (IPv4 eller IPv6) ditt nätverk för närvarande använder för att ansluta till internet. Allt fler internetleverantörer och webbplatser stöder nu IPv6.</p>
+    <p>Vårt verktyg visar automatiskt vilken typ av publik IP‑adress (IPv4 eller IPv6) ditt nätverk för närvarande använder för att ansluta till internet. Allt fler internetleverantörer och webbplatser stöder nu IPv6.</p>
   </div>
 
   <hr class="my-4">
@@ -264,7 +264,7 @@
   </section>
 
   <div class="text-center mt-5 mb-4">
-    <p><small>IP.weconnect.se - Ditt snabba och enkla verktyg för att se din IP-adress.</small></p>
+    <p><small>IP.weconnect.se – Ditt snabba och enkla verktyg för att se din IP‑adress.</small></p>
   </div>
 
 </section>
