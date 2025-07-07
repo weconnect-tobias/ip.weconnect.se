@@ -180,7 +180,15 @@
                 <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
               </ul>
             </li>
-            <li><a href="https://123support.se">Fjärrsupport</a></li>
+            <li><a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Fjärrsupport
+              <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
+              </a>
+                <ul class="dropdown" role="menu">
+                <li><a href="https://weconnect.se/WeConnectNordicAB-RemoteSupport.exe">Windows Klient</a></li>
+                <li><a href="https://weconnect.se/WeConnectNordicAB-RemoteSupport.tgz">MAC Klient</a></li>
+                <li><a href="https://weconnect.se/mac-fjarrhjalp-guide/">MAC fjärrhjälp guide</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
