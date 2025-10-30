@@ -212,8 +212,8 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 
 <div class="hero-gradient-area">
       <div class="hero-text">
-        <h2 class="hero-title">IT support &amp; lösningar</h2>
-        <p  class="hero-subtitle">För små &amp; mellanstora företag</p>
+        <h1 class="hero-title">IT support &amp; lösningar</h1>
+        <p class="hero-subtitle">För små &amp; mellanstora företag</p>
       </div>
     </div>
     
@@ -254,8 +254,8 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
     <h2>IPv4 kontra IPv6</h2>
     <p>Internet använder huvudsakligen två typer av IP‑adresser: IPv4 och IPv6.</p>
     <ul>
-      <li><strong>IPv4 (Internet Protocol version 4):</strong> Detta är den äldre standarden och representeras oftast som fyra sifferblock separerade med punkter (t.ex. <code>192.0.2.1</code>). Antalet tillgängliga IPv4‑adresser börjar ta slut.</li>
-      <li><strong>IPv6 (Internet Protocol version 6):</strong> Detta är en nyare standard som infördes för att lösa bristen på IPv4‑adresser. IPv6‑adresser är längre och skrivs med hexadecimala siffror och kolon (t.ex. <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>). IPv6 erbjuder ett nästan obegränsat antal adresser och andra tekniska förbättringar.</li>
+      <li><strong>IPv4 (Internet Protocol version 4):</strong> Detta är den äldre standarden och representeras oftast som fyra sifferblock separerade med punkter (t.ex. 192.0.2.1). Antalet tillgängliga IPv4-adresser börjar ta slut.</li>
+      <li><strong>IPv6 (Internet Protocol version 6):</strong> Detta är en nyare standard som infördes för att lösa bristen på IPv4‑adresser. IPv6‑adresser är längre och skrivs med hexadecimala siffror och kolon (t.ex. <code>2001:db8::1</code>). IPv6 erbjuder ett nästan obegränsat antal adresser och andra tekniska förbättringar.</li>
     </ul>
     <p>Vårt verktyg visar automatiskt vilken typ av publik IP‑adress (IPv4 eller IPv6) ditt nätverk för närvarande använder för att ansluta till internet. Allt fler internetleverantörer och webbplatser stöder nu IPv6.</p>
   </div>
