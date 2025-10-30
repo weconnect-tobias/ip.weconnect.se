@@ -2,9 +2,25 @@
  * Accessible dropdown navigation & Hide-on-scroll header logic
  */
 (function() {
-    // === 1. DROPDOWN LOGIC ===
+    'use strict';
+
+    // === 1. UTILITIES ===
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // === 2. DROPDOWN LOGIC ===
     const triggers = document.querySelectorAll('.has-dropdown');
     const header = document.querySelector('header');
+    
     const closeAll = () => triggers.forEach(t => {
         t.parentElement.classList.remove('open');
         t.setAttribute('aria-expanded', 'false');
@@ -18,44 +34,80 @@
         });
     });
 
-    // === 2. HEADER SCROLL BEHAVIOR ===
-    let lastScrollPosition = window.scrollY;
-    let ticking = false;
+    // === 3. HEADER SCROLL BEHAVIOR ===
+    let lastScroll = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollDirection = 'up';
+    let lastScrollTime = Date.now();
 
-    function handleScroll() {
-        const currentScrollPosition = window.scrollY;
+    const SCROLL_THRESHOLD = 50;
+    const SCROLL_TIMEOUT = 150;
+
+    function updateHeader() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        const scrolled = currentScroll > 10;
         
-        // Lägg till scrolled-klass när vi inte är högst upp
-        if (currentScrollPosition > 0) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        // Uppdatera bakgrundsfärg
+        header.classList.toggle('scrolled', scrolled);
+
+        // Bestäm scroll-riktning och hantera header-synlighet
+        if (Math.abs(currentScroll - lastScroll) > SCROLL_THRESHOLD) {
+            const now = Date.now();
+            if (now - lastScrollTime > SCROLL_TIMEOUT) {
+                scrollDirection = currentScroll > lastScroll ? 'down' : 'up';
+                lastScrollTime = now;
+
+                if (scrollDirection === 'down' && currentScroll > 100) {
+                    if (!header.classList.contains('header-hidden')) {
+                        header.classList.add('header-hidden');
+                        closeAll();
+                    }
+                } else if (scrollDirection === 'up' || currentScroll <= 100) {
+                    header.classList.remove('header-hidden');
+                }
+            }
         }
 
-        // Hantera header synlighet
-        if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
-            // Scrollar nedåt och är inte högst upp
-            header.classList.add('header-hidden');
-            closeAll(); // Stäng dropdowns när headern döljs
-        } else {
-            // Scrollar uppåt eller är nära toppen
-            header.classList.remove('header-hidden');
-        }
-
-        lastScrollPosition = currentScrollPosition;
-        ticking = false;
+        lastScroll = currentScroll;
     }
 
-    // Optimera scroll-händelsen med requestAnimationFrame
+    // Optimerad scroll-hantering
+    const debouncedScroll = debounce(updateHeader, 10);
+    
     window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                handleScroll();
-                ticking = false;
-            });
-            ticking = true;
+        window.requestAnimationFrame(debouncedScroll);
+    }, { passive: true });
+
+    // Hantera touch-enheter
+    let touchStart = 0;
+    window.addEventListener('touchstart', e => {
+        touchStart = e.touches[0].pageY;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', e => {
+        const touchEnd = e.touches[0].pageY;
+        const diff = touchStart - touchEnd;
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                // Scrollar upp
+                header.classList.add('header-hidden');
+                closeAll();
+            } else {
+                // Scrollar ner
+                header.classList.remove('header-hidden');
+            }
+            touchStart = touchEnd;
         }
     }, { passive: true });
+
+    // Initial state
+    updateHeader();
+
+    // Reset header position on page load/refresh
+    window.addEventListener('beforeunload', () => {
+        header.classList.remove('header-hidden');
+    });
+})();
 
     // Event Listeners
     document.addEventListener('click', e => {
