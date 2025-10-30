@@ -30,22 +30,33 @@
     function updateHeader() {
         const currentScrollY = window.scrollY;
         const scrollingDown = currentScrollY > lastScrollY;
+        const scrollDelta = Math.abs(currentScrollY - lastScrollY);
+
+        // Only react to significant scroll changes
+        if (scrollDelta < 5) {
+            ticking = false;
+            return;
+        }
 
         // Aktivera headerdöljning efter tröskelvärdet
         if (currentScrollY > SCROLL_THRESHOLD) {
             if (scrollingDown && isHeaderVisible) {
-                header.classList.add('header--hidden');
-                closeAll(); // Stäng dropdowns när headern döljs
-                isHeaderVisible = false;
+                requestAnimationFrame(() => {
+                    header.classList.add('header--hidden');
+                    closeAll(); // Stäng dropdowns när headern döljs
+                    isHeaderVisible = false;
+                });
             } else if (!scrollingDown && !isHeaderVisible) {
+                requestAnimationFrame(() => {
+                    header.classList.remove('header--hidden');
+                    isHeaderVisible = true;
+                });
+            }
+        } else if (!isHeaderVisible) {
+            requestAnimationFrame(() => {
                 header.classList.remove('header--hidden');
                 isHeaderVisible = true;
-            }
-        } else {
-            if (!isHeaderVisible) {
-                header.classList.remove('header--hidden');
-                isHeaderVisible = true;
-            }
+            });
         }
 
         lastScrollY = currentScrollY;

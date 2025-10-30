@@ -178,7 +178,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
             <source srcset="/img/WeConnect-Logo-White-350.webp" type="image/webp">
             <source srcset="/img/WeConnect-Logo-White-350.png"  type="image/png">
             <img class="logo-style" src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" loading="lazy" decoding="async" 
-                **width="350" height="80"**>
+                width="350" height="80">
           </picture>
         </a>
         <nav aria-label="Huvudmeny">
