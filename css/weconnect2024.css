@@ -146,10 +146,18 @@ nav ul li a:focus {
 /* Styr själva gradient-bakgrunden och höjden */
 .gradient-wrapper {
   background: linear-gradient(135deg, #0d1e55, #9a007e);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
   width: 100%;
   position: relative;
   overflow: visible;
   padding-top: 80px; /* Space for fixed header */
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
 }
 
 .hero-gradient-area {
@@ -176,15 +184,19 @@ nav ul li a:focus {
   color: #fff;
   margin: 0;
   padding: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .hero-subtitle {
-  font-size: 22px;
+  font-size: 24px;
   color: #fff;
   margin-top: 0.5em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   opacity: 0.95;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 /* Säkerställ att den vita innehållsboxen ligger rätt */
