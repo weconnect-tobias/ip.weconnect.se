@@ -73,36 +73,48 @@ nav ul li a {
   transition: opacity 0.3s;
 }
 
-nav ul li ul {
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
-  padding: 10px 0;
+  padding: 10px;
   z-index: 99;
   border-radius: 4px;
   min-width: 240px;
+  flex-direction: column;
+  gap: 8px;
 }
 
-nav ul li:hover ul {
-  display: block;
+.dropdown[data-show="true"],
+li:hover .dropdown {
+  display: flex;
 }
 
-nav ul li ul li {
-  display: block;
-  padding: 8px 20px;
-}
-
-nav ul li ul li a {
+.dropdown a {
   color: white;
-  display: block;
-  text-align: left;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
 }
 
-nav ul li ul li a:hover {
-  opacity: 0.8;
+.dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .icon-chevron {
