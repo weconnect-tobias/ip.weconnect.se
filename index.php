@@ -184,29 +184,27 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
         <nav aria-label="Huvudmeny">
           <ul>
             <li>
-              <button type="button" class="nav-button has-dropdown" aria-expanded="false">
-                Tjänster
-                <img src="/img/icons/chevron.svg" class="icon-chevron" alt="" width="18" height="18">
-              </button>
-              <div class="dropdown" role="menu">
-                <a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a>
-                <a href="https://weconnect.se/it-support/">IT‑Support</a>
-                <a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a>
-                <a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a>
-                <a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a>
-              </div>
+              <a href="" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Tjänster
+                <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
+              </a>
+              <ul class="dropdown" role="menu">
+                <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
+                <li><a href="https://weconnect.se/it-support/">IT‑Support</a></li>
+                <li><a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
+                <li><a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
+                <li><a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
+              </ul>
             </li>
             <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
             <li>
-              <button type="button" class="nav-button has-dropdown" aria-expanded="false">
-                Kontakt
-                <img src="/img/icons/chevron.svg" class="icon-chevron" alt="" width="18" height="18">
-              </button>
-              <div class="dropdown" role="menu">
-                <a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a>
-              </div>
+              <a href="https://weconnect.se/kontakt/" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Kontakt
+                <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
+              </a>
+              <ul class="dropdown" role="menu">
+                <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
+              </ul>
             </li>
-            <li><a href="https://weconnect.se/fjarrsupport/">Fjärrsupport</a></li>
+            <li><a href="https://weconnect.se/fjarrsupport/" aria-haspopup="true" aria-expanded="false">Fjärrsupport</a></li>
           </ul>
         </nav>
       </div>
@@ -221,19 +219,21 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
     
 <main>
       <section id="main-content-white">
-                <section class="ip-display">
-          <h1>Din IP‑adress är
+                <div class="ip-box">
+          <h1>Din IP‑adress är&nbsp;
             <button id="ip-display" class="ip-number" aria-label="Kopiera IP-adress" data-ip="<?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>">
               <?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>
             </button>
           </h1>
+        </div>
 
-          <h2>Vad är en IP-adress?</h2>
-          <p>En IP-adress är din dators digitala hemadress på internet. Den gör det möjligt för webbplatser att skicka information till rätt plats. Du använder just nu en <?= strpos($ipaddress, ':') !== false ? 'IPv6' : 'IPv4' ?>-adress för att besöka denna sida.</p>
-          <p>Denna information är användbar vid IT‑support, nätverksfelsökning och routerkonfigurering.</p>
-        </section>
+  <div>
+    <h2>Vad är en IP-adress? (Förklaring)</h2>
+    <p>En IP-adress är som en "hemadress" för din internetanslutning. Den gör det möjligt för webbplatser och tjänster att veta var information ska skickas – lite som ett returadress‑kuvert, fast digitalt. Den identifierar din anslutning på internet så att data du begär (som denna webbsida) kan hitta tillbaka till dig.</p>
+    <p>Den här sidan visar vilken publik IP‑adress du använder just nu för att kommunicera med internet, oavsett om det är en <strong>IPv4</strong>- eller <strong>IPv6</strong>-adress. Denna information kan vara användbar i flera situationer, exempelvis vid IT‑support, nätverksfelsökning eller konfigurering av en router.</p>
+  </div>
 
-        <hr class="my-4">
+  <hr class="my-4">
     <h2>Användningsområden för din IP‑adress</h2>
     <p>Att känna till din publika IP‑adress är viktigt i många situationer, bland annat:</p>
     <ul>
