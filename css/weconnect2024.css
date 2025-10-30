@@ -34,23 +34,15 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.9);
   margin: 0;
   border: none;
-  transition: transform 0.2s ease-out, background-color 0.3s ease-out;
-  will-change: transform;
-}
-
-header.scrolled {
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 }
 
 .header--hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-  pointer-events: none;
+  transform: translateY(-110%);
 }
 
 .header-container {

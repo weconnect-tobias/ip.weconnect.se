@@ -21,44 +21,28 @@
     const header = document.querySelector('header');
     if (!header) return;
 
-    const SCROLL_THRESHOLD = 20;  // Lowered threshold
-    const SCROLL_DELTA = 5;      // Minimum scroll difference to trigger
-    let lastScrollY = window.scrollY;
-    let isScrolling = false;
-
-    function updateHeader() {
-        const currentScrollY = window.scrollY;
-        const scrollDelta = Math.abs(currentScrollY - lastScrollY);
-
-        // Add background when scrolled
-        if (currentScrollY > 10) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        // Only process if scroll delta is significant
-        if (scrollDelta < SCROLL_DELTA) {
-            isScrolling = false;
+    let lastScroll = 0;
+    
+    function handleScroll() {
+        const currentScroll = window.scrollY;
+        
+        // At the very top of the page
+        if (currentScroll <= 0) {
+            header.classList.remove('header--hidden');
             return;
         }
-
-        // At top of page
-        if (currentScrollY <= 0) {
-            header.classList.remove('header--hidden');
-        } 
-        // Going down - hide header
-        else if (currentScrollY > lastScrollY && currentScrollY > SCROLL_THRESHOLD) {
+        
+        // Scrolling down
+        if (currentScroll > lastScroll && currentScroll > 100) {
             header.classList.add('header--hidden');
             closeAll();
         }
-        // Going up significantly - show header
-        else if (currentScrollY < lastScrollY - SCROLL_DELTA * 2) {
+        // Scrolling up
+        else if (currentScroll < lastScroll) {
             header.classList.remove('header--hidden');
         }
-
-        lastScrollY = currentScrollY;
-        isScrolling = false;
+        
+        lastScroll = currentScroll;
     }
 
     // Event Listeners
@@ -69,12 +53,7 @@
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape') closeAll();
     });
-
-    // Optimized scroll handler with requestAnimationFrame
-    window.addEventListener('scroll', () => {
-        if (!isScrolling) {
-            window.requestAnimationFrame(updateHeader);
-            isScrolling = true;
-        }
-    }, { passive: true });
+    
+    // Simple scroll listener without throttling for more responsive behavior
+    window.addEventListener('scroll', handleScroll, { passive: true });
 })();
