@@ -217,13 +217,16 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
       </div>
     </div>
     
-<main>
+    <main>
       <section id="main-content-white">
                 <div class="ip-box">
           <h1>Din IP‑adress är&nbsp;
-            <button id="ip-display" class="ip-number" aria-label="Kopiera IP-adress" data-ip="<?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>">
-              <?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>
-            </button>
+            <span id="ip-display" 
+                  class="ip-number" 
+                  role="button" 
+                  tabindex="0"
+                  aria-label="<?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?> (Klicka för att kopiera)"
+                  data-ip="<?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>"><?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></span>
           </h1>
         </div>
 
