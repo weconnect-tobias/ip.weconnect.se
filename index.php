@@ -180,7 +180,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
           <picture>
             <source srcset="/img/WeConnect-Logo-White-350.webp" type="image/webp">
             <source srcset="/img/WeConnect-Logo-White-350.png"  type="image/png">
-            <img src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" loading="lazy" decoding="async" style="max-width:250px;height:auto;">
+            <img class="logo-style" src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" loading="lazy" decoding="async">
           </picture>
         </a>
         <nav aria-label="Huvudmeny">
@@ -287,7 +287,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 
 </section>
 </main>
-<footer style="margin-top: auto;">
+<footer class="auto-margin-footer">
   <div class="footer-section">
     <img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" height="40">
   </div>

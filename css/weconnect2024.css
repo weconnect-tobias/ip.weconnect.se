@@ -342,3 +342,14 @@ footer a {
     background-color: #111835;
   }
 }
+
+/* Ny klass för logostil */
+.logo-style {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Ny klass för footer-marginalen */
+.auto-margin-footer {
+    margin-top: auto;
+}
