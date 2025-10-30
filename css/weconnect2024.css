@@ -203,19 +203,24 @@ nav ul li ul li a:hover {
 }
 
 .ip-number {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
-  font-size: 1.8rem;
-  letter-spacing: 0.5px;
-  color: #4caf50;
-  transition: color 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  text-decoration: underline dotted;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    color: #9ccc65; /* Fix: Använd en LJUS färg (#4caf50 var för mörk) */
+    transition: color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    text-decoration: underline dotted;
+    
+    /* FIX: Tvinga knappen att inte ha någon bakgrund eller kant */
+    background: transparent; 
+    border: none; 
+    padding: 0;
 }
 
 .ip-number.copied {
-  color: #4caf50;
+    color: #9ccc65; /* Använd en ljus färg för den kopierade statusen också */
 }
 
 .ip-number::after {
@@ -285,9 +290,23 @@ footer a {
   }
 
   #main-content-white .ip-box h1,
-  .ip-number,
   nav ul li a {
-    color: #ffffff;
+        color: #ffffff;
+  }
+
+  /* SPECIFIK FIX FÖR KNAPPEN INUTI IP-BOX I DARK MODE */
+  .ip-number {
+    /* FIX: Tvinga bakgrunden att vara transparent så att den ärver den mörka .ip-box bakgrunden */
+    background: transparent; 
+    border: none;
+    padding: 0;
+        
+  /* FIX: Använd vit färg (eller #9ccc65 om ni föredrar en accentfärg här) */
+    color: #ffffff; 
+  }
+    
+  .ip-number.copied {
+    color: #9ccc65; /* Ljus accentfärg för att visa att den har kopierats */
   }
 
   .margin-bottom-large {
