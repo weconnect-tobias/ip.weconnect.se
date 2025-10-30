@@ -40,7 +40,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   <meta name="twitter:description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">  <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
   
   <!-- Resource hints -->
-  <link rel="preload" href="fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Ytterligare meta för sökmotorer -->
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
