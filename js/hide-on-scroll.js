@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateHeader() {
         const currentScrollY = window.scrollY;
 
-        // BÖRJA dölja först när vi har scrollat förbi headerns höjd (t.ex. 80px)
-        if (currentScrollY > header.offsetHeight) {
+        // Vi vill att funktionen ska aktiveras först när man scrollat förbi headern
+        // För att undvika att headern döljs direkt vid laddning.
+        if (currentScrollY > header.offsetHeight) { 
             
             if (currentScrollY > lastScrollY) {
                 // Scrollar NER: Dölj menyn
