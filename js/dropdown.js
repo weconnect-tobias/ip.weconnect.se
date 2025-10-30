@@ -18,6 +18,23 @@
     });
 
     // === 2. HEADER SCROLL BEHAVIOR ===
+    const header = document.querySelector('header');
+    let lastScroll = window.pageYOffset;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 50 || lastScroll > currentScroll) {
+            header.style.top = "0";
+        } else {
+            header.style.top = "-100px";
+            closeAll();
+        }
+        
+        lastScroll = currentScroll;
+    }, { passive: true });
+
+    // === 2. HEADER SCROLL BEHAVIOR ===
     let prevScrollpos = window.pageYOffset;
     
     window.onscroll = function() {

@@ -28,13 +28,13 @@ body {
 }
 
 /* ========== HEADER ========== */
-#navbar {
+header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.9);
+  background: transparent;
   margin: 0;
   border: none;
   transition: top 0.3s ease;
@@ -146,12 +146,11 @@ nav ul li a:focus {
 /* Styr själva gradient-bakgrunden och höjden */
 .hero-gradient-area {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px; /* Behåller samma höjd som tidigare */
-  padding-top: 100px;  /* Utrymme för headern */
-  padding-bottom: 20px;
+  flex-direction: column;
+  min-height: 400px;
+  padding: 0 0 20px;
   background: linear-gradient(135deg, #0d1e55, #9a007e);
+  position: relative;
 }
 
 /* En container för texten */
