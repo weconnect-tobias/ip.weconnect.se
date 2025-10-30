@@ -12,7 +12,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   <meta charset="UTF-8">
   <!-- Main stylesheet -->
   <link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
-  
+
   <title>Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect</title>
   <meta name="description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">
 
@@ -304,6 +304,5 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   <script src="/js/copy-ip.js"     nonce="<?= $nonce ?>" defer></script>
   <script src="/js/email-protect.js" nonce="<?= $nonce ?>" defer></script>
   <script src="/js/dropdown.js"   nonce="<?= $nonce ?>" defer></script>
-  <script src="/js/hide-on-scroll.js" nonce="<?= $nonce ?>" defer></script>
 </body>
 </html>
