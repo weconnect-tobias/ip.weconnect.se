@@ -4,6 +4,7 @@
 (function() {
     // === 1. DROPDOWN LOGIC ===
     const triggers = document.querySelectorAll('.has-dropdown');
+    const header = document.querySelector('header');
     const closeAll = () => triggers.forEach(t => {
         t.parentElement.classList.remove('open');
         t.setAttribute('aria-expanded', 'false');
@@ -18,16 +19,15 @@
     });
 
     // === 2. HEADER SCROLL BEHAVIOR ===
-    const header = document.querySelector('header');
     let lastScroll = window.pageYOffset;
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         
         if (currentScroll <= 50 || lastScroll > currentScroll) {
-            header.style.top = "0";
+            header.style.transform = "translateY(0)";
         } else {
-            header.style.top = "-100px";
+            header.style.transform = "translateY(-100%)";
             closeAll();
         }
         

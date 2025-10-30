@@ -34,10 +34,10 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: transparent;
   margin: 0;
   border: none;
-  transition: top 0.3s ease;
+  transition: transform 0.3s ease;
+  background: transparent;
 }
 
 .header-container {
@@ -144,12 +144,22 @@ nav ul li a:focus {
 }
 
 /* Styr själva gradient-bakgrunden och höjden */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #0d1e55, #9a007e);
+  z-index: -1;
+}
+
 .hero-gradient-area {
   display: flex;
   flex-direction: column;
   min-height: 400px;
-  padding: 0 0 20px;
-  background: linear-gradient(135deg, #0d1e55, #9a007e);
+  padding: 120px 0 40px;
   position: relative;
 }
 
