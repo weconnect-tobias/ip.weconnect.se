@@ -4,7 +4,10 @@
 (function() {
     // === 1. DROPDOWN LOGIK ===
     const triggers = document.querySelectorAll('.has-dropdown');
-    const closeAll = () => triggers.forEach(t => {t.parentElement.classList.remove('open');t.setAttribute('aria-expanded','false');});
+    const closeAll = () => triggers.forEach(t => {
+        t.parentElement.classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+    });
 
     triggers.forEach(trigger => {
         trigger.addEventListener('click', e => {
@@ -14,57 +17,78 @@
         });
     });
 
-    document.addEventListener('click', e => {
-        if (!e.target.closest('nav')) closeAll();
-    });
-
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeAll();
-    });
-
-    // === 2. HIDE-ON-SCROLL LOGIK ===
+    // === 2. HEADER SCROLL BEHAVIOR ===
     const header = document.querySelector('header');
-    
-    if (!header) return; 
+    if (!header) return;
 
-    // ✅ NYCKELÄNDRING: Beräkna höjden en gång vid laddning (Fixar Forced Reflow)
-    const headerHeight = header.offsetHeight; 
-
-    const hideClass = 'header--hidden';
-    let lastScrollY = 0;
-    let ticking = false; // För prestandaoptimering
+    const SCROLL_THRESHOLD = 50; // Börja dölj efter 50px scroll
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    let scrollTimer = null;
+    let isHeaderVisible = true;
 
     function updateHeader() {
         const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY;
 
-        // Använder den förberäknade headerHeight istället för att tvinga en ny layout.
-        if (currentScrollY > headerHeight) { 
-            
-            if (currentScrollY > lastScrollY) {
-                // Scrollar NER: Dölj menyn
-                header.classList.add(hideClass);
-            } else if (currentScrollY < lastScrollY) {
-                // Scrollar UPP: Visa menyn
-                header.classList.remove(hideClass);
+        // Aktivera headerdöljning efter tröskelvärdet
+        if (currentScrollY > SCROLL_THRESHOLD) {
+            if (scrollingDown && isHeaderVisible) {
+                header.classList.add('header--hidden');
+                closeAll(); // Stäng dropdowns när headern döljs
+                isHeaderVisible = false;
+            } else if (!scrollingDown && !isHeaderVisible) {
+                header.classList.remove('header--hidden');
+                isHeaderVisible = true;
             }
         } else {
-            // Högst upp på sidan: Se till att menyn är synlig
-            header.classList.remove(hideClass);
+            if (!isHeaderVisible) {
+                header.classList.remove('header--hidden');
+                isHeaderVisible = true;
+            }
         }
 
         lastScrollY = currentScrollY;
         ticking = false;
     }
 
-    // Använd requestAnimationFrame för optimal prestanda vid scroll
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(updateHeader);
-            ticking = true;
+    // Event Listeners
+    document.addEventListener('click', e => {
+        if (!e.target.closest('nav')) closeAll();
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            closeAll();
+            header.classList.remove('header--hidden');
+            isHeaderVisible = true;
         }
     });
 
-    // Initial körning
-    updateHeader();
+    // Scroll handler with debounce and requestAnimationFrame
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateHeader();
+                ticking = true;
+            });
+        }
 
+        // Clear existing timer
+        if (scrollTimer) {
+            clearTimeout(scrollTimer);
+        }
+
+        // Set new timer
+        scrollTimer = setTimeout(() => {
+            // När scrollningen stannar, visa headern om vi är nära toppen
+            if (window.scrollY < SCROLL_THRESHOLD) {
+                header.classList.remove('header--hidden');
+                isHeaderVisible = true;
+            }
+        }, 150); // Vänta 150ms efter att scrollningen stannat
+    }, { passive: true });
+
+    // Initialize
+    updateHeader();
 })();
