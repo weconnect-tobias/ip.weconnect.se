@@ -186,7 +186,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
         <nav aria-label="Huvudmeny">
           <ul>
             <li>
-              <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Tjänster
+              <a href="" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Tjänster
                 <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
               </a>
               <ul class="dropdown" role="menu">
@@ -206,10 +206,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
                 <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
               </ul>
             </li>
-            <li><a href="https://weconnect.se/fjarrsupport/" aria-haspopup="true" aria-expanded="false">Fjärrsupport
-              <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
-              </a>
-            </li>
+            <li><a href="https://weconnect.se/fjarrsupport/" aria-haspopup="true" aria-expanded="false">Fjärrsupport</a></li>
           </ul>
         </nav>
       </div>
