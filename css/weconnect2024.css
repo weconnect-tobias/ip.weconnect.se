@@ -148,7 +148,8 @@ nav ul li a:focus {
   background: linear-gradient(135deg, #0d1e55, #9a007e);
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  padding-top: 80px; /* Space for fixed header */
 }
 
 .hero-gradient-area {
@@ -156,30 +157,34 @@ nav ul li a:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
-  padding: 120px 0 40px;
+  min-height: 320px;
+  padding: 60px 20px;
   position: relative;
+  text-align: center;
 }
 
 /* En container för texten */
 .hero-text {
   padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Styla denna klass för att se ut EXAKT som er gamla H2 */
 .hero-title {
   font-size: 48px;
   font-weight: 700;
   color: #fff;
   margin: 0;
   padding: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Styla denna klass för att se ut EXAKT som er gamla P */
 .hero-subtitle {
   font-size: 22px;
   color: #fff;
-  margin-top: 0.5em; /* Lite avstånd från titeln */
+  margin-top: 0.5em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
 }
 
 /* Säkerställ att den vita innehållsboxen ligger rätt */
