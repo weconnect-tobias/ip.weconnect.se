@@ -176,7 +176,8 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
           <picture>
             <source srcset="/img/WeConnect-Logo-White-350.webp" type="image/webp">
             <source srcset="/img/WeConnect-Logo-White-350.png"  type="image/png">
-            <img class="logo-style" src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" loading="lazy" decoding="async">
+            <img class="logo-style" src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" loading="lazy" decoding="async" 
+                **width="350" height="80"**>
           </picture>
         </a>
         <nav aria-label="Huvudmeny">
@@ -285,8 +286,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 </main>
 <footer class="auto-margin-footer" role="contentinfo">
   <div class="footer-section">
-    <img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" height="40">
-  </div>
+<img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" **width="175" height="40"**>  </div>
   <div class="footer-section">
     <strong>Adress Strömstad</strong><br>
     Oslovägen 50<br>
@@ -300,8 +300,9 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 </footer>
 
   <!-- JS‑bundle -->
-  <script src="/js/copy-ip.js"     defer></script>
-  <script src="/js/email-protect.js" defer></script>
-  <script src="/js/dropdown.js"   defer></script>
+  <script src="/js/copy-ip.js"     nonce="<?= $nonce ?>" defer></script>
+  <script src="/js/email-protect.js" nonce="<?= $nonce ?>" defer></script>
+  <script src="/js/dropdown.js"   nonce="<?= $nonce ?>" defer></script>
+  <script src="/js/hide-on-scroll.js" nonce="<?= $nonce ?>" defer></script>
 </body>
 </html>

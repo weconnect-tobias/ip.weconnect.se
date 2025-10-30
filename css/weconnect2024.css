@@ -29,7 +29,7 @@ body {
 
 /* ========== HEADER ========== */
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -37,6 +37,7 @@ header {
   background: transparent;
   margin: 0;
   border: none;
+  transition: transform 0.3s ease-out;
 }
 
 .header-container {
@@ -372,4 +373,14 @@ footer a {
 /* Ny klass för footer-marginalen */
 .auto-margin-footer {
     margin-top: auto;
+}
+
+.nav-logo {
+  height: 40px; 
+  width: auto; /* Detta beräknar bredden automatiskt */
+}
+
+.header--hidden {
+  /* Skjuter menyn helt utanför fönstrets övre kant */
+  transform: translateY(-100%); 
 }
