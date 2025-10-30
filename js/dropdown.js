@@ -19,46 +19,42 @@
     });
 
     // === 2. HEADER SCROLL BEHAVIOR ===
-    let lastScroll = 0;
-    let scrollTimer = null;
-    const scrollThreshold = 50; // Minimum scroll distance before hiding header
-    const headerHeight = header.offsetHeight;
+    let lastScrollPosition = window.scrollY;
+    let ticking = false;
 
+    function handleScroll() {
+        const currentScrollPosition = window.scrollY;
+        
+        // Lägg till scrolled-klass när vi inte är högst upp
+        if (currentScrollPosition > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Hantera header synlighet
+        if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
+            // Scrollar nedåt och är inte högst upp
+            header.classList.add('header-hidden');
+            closeAll(); // Stäng dropdowns när headern döljs
+        } else {
+            // Scrollar uppåt eller är nära toppen
+            header.classList.remove('header-hidden');
+        }
+
+        lastScrollPosition = currentScrollPosition;
+        ticking = false;
+    }
+
+    // Optimera scroll-händelsen med requestAnimationFrame
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        // Always show header at top of page
-        if (currentScroll < headerHeight) {
-            header.style.transform = "translateY(0)";
-            return;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
         }
-
-        // Don't hide header during small scroll adjustments
-        if (Math.abs(currentScroll - lastScroll) < scrollThreshold) {
-            return;
-        }
-
-        // Scrolling down
-        if (currentScroll > lastScroll) {
-            header.style.transform = "translateY(-100%)";
-            closeAll();
-        } 
-        // Scrolling up
-        else {
-            header.style.transform = "translateY(0)";
-        }
-        
-        lastScroll = currentScroll;
-
-        // Clear existing timer
-        if (scrollTimer !== null) {
-            clearTimeout(scrollTimer);
-        }
-
-        // Set new timer to show header after scrolling stops
-        scrollTimer = setTimeout(() => {
-            header.style.transform = "translateY(0)";
-        }, 1500);
     }, { passive: true });
 
     // Event Listeners
