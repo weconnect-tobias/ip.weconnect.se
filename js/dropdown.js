@@ -21,25 +21,40 @@
     const header = document.querySelector('header');
     if (!header) return;
 
-    const SCROLL_THRESHOLD = 50;
+    const SCROLL_THRESHOLD = 20;  // Lowered threshold
+    const SCROLL_DELTA = 5;      // Minimum scroll difference to trigger
     let lastScrollY = window.scrollY;
     let isScrolling = false;
 
     function updateHeader() {
         const currentScrollY = window.scrollY;
+        const scrollDelta = Math.abs(currentScrollY - lastScrollY);
 
-        // Always show header at top of page
+        // Add background when scrolled
+        if (currentScrollY > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Only process if scroll delta is significant
+        if (scrollDelta < SCROLL_DELTA) {
+            isScrolling = false;
+            return;
+        }
+
+        // At top of page
         if (currentScrollY <= 0) {
             header.classList.remove('header--hidden');
+        } 
+        // Going down - hide header
+        else if (currentScrollY > lastScrollY && currentScrollY > SCROLL_THRESHOLD) {
+            header.classList.add('header--hidden');
+            closeAll();
         }
-        // Hide/show based on scroll direction after threshold
-        else if (currentScrollY > SCROLL_THRESHOLD) {
-            if (currentScrollY > lastScrollY) {
-                header.classList.add('header--hidden');
-                closeAll(); // Close dropdowns when hiding header
-            } else if (currentScrollY < lastScrollY) {
-                header.classList.remove('header--hidden');
-            }
+        // Going up significantly - show header
+        else if (currentScrollY < lastScrollY - SCROLL_DELTA * 2) {
+            header.classList.remove('header--hidden');
         }
 
         lastScrollY = currentScrollY;
