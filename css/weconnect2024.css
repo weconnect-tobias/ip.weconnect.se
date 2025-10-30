@@ -105,6 +105,26 @@ nav ul li ul li a:hover {
   opacity: 0.8;
 }
 
+/* ========== TILLGÄNGLIGHET & FOKUS FIX (CUSTOM CONTROLS) ========== */
+
+/* Säkerställer att alla interaktiva element visar en tydlig fokusindikator */
+a:focus,
+button:focus {
+    /* Använd en tydlig färg, t.ex. klar gul, som syns bra mot både ljus och mörk bakgrund */
+    outline: 3px solid #f9d854; 
+    /* Lägg till en liten marginal runt ramen så den inte ligger dikt an mot elementet */
+    outline-offset: 3px; 
+    /* (Valfritt) Lägg till en skugga för extra djup/tydlighet */
+    box-shadow: 0 0 0 5px rgba(249, 216, 84, 0.5);
+}
+
+/* Överlagra för menydropplistorna för att hantera den mörka bakgrunden */
+nav ul li a:focus {
+    color: #f9d854; /* Ändra textfärgen vid fokus */
+    outline: 2px solid #f9d854;
+    outline-offset: 2px;
+}
+
 .icon-chevron {
   width: 18px;
   height: 18px;

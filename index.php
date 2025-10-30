@@ -65,7 +65,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   <link rel="alternate" hreflang="x-default" href="https://ip.weconnect.se/">
 
   <!-- Structured data (Schema.org) -->
-  <script type="application/ld+json">
+  <script type="application/ld+json" nonce="<?= $nonce ?>">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -110,7 +110,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   "datePublished": "2025-06-02"
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" nonce="<?= $nonce ?>">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -122,7 +122,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   }
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" nonce="<?= $nonce ?>">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -150,7 +150,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   ]
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" nonce="<?= $nonce ?>">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
