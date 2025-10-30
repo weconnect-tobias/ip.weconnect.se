@@ -171,7 +171,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 </head>
 <body>
 
-<header>
+<header id="navbar">
       <div class="header-container">
         <a href="https://weconnect.se" target="_blank" rel="noopener noreferrer" aria-label="WeConnect Nordic AB Hemsida">
           <picture>

@@ -18,31 +18,24 @@
     });
 
     // === 2. HEADER SCROLL BEHAVIOR ===
-    const header = document.querySelector('header');
-    if (!header) return;
-
-    let lastScroll = 0;
+    let prevScrollpos = window.pageYOffset;
     
-    function handleScroll() {
-        const currentScroll = window.scrollY;
+    window.onscroll = function() {
+        const currentScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
         
-        // At the very top of the page
-        if (currentScroll <= 0) {
-            header.classList.remove('header--hidden');
-            return;
+        if (prevScrollpos > currentScrollPos) {
+            navbar.style.top = "0";
+        } else {
+            navbar.style.top = "-100%"; // Using -100% instead of fixed pixel value to ensure entire header is hidden
         }
         
-        // Scrolling down
-        if (currentScroll > lastScroll && currentScroll > 100) {
-            header.classList.add('header--hidden');
+        // Close dropdowns when hiding header
+        if (prevScrollpos < currentScrollPos) {
             closeAll();
         }
-        // Scrolling up
-        else if (currentScroll < lastScroll) {
-            header.classList.remove('header--hidden');
-        }
         
-        lastScroll = currentScroll;
+        prevScrollpos = currentScrollPos;
     }
 
     // Event Listeners
@@ -53,7 +46,4 @@
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape') closeAll();
     });
-    
-    // Simple scroll listener without throttling for more responsive behavior
-    window.addEventListener('scroll', handleScroll, { passive: true });
 })();
