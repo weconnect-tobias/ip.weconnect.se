@@ -36,8 +36,15 @@ header {
   z-index: 100;
   margin: 0;
   border: none;
-  transition: transform 0.3s ease;
-  background: transparent;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background: rgba(13, 30, 85, 0);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+header.scrolled {
+  background: rgba(13, 30, 85, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {

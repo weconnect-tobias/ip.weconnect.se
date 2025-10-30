@@ -19,41 +19,47 @@
     });
 
     // === 2. HEADER SCROLL BEHAVIOR ===
-    let lastScroll = window.pageYOffset;
+    let lastScroll = 0;
+    let scrollTimer = null;
+    const scrollThreshold = 50; // Minimum scroll distance before hiding header
+    const headerHeight = header.offsetHeight;
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         
-        if (currentScroll <= 50 || lastScroll > currentScroll) {
+        // Always show header at top of page
+        if (currentScroll < headerHeight) {
             header.style.transform = "translateY(0)";
-        } else {
+            return;
+        }
+
+        // Don't hide header during small scroll adjustments
+        if (Math.abs(currentScroll - lastScroll) < scrollThreshold) {
+            return;
+        }
+
+        // Scrolling down
+        if (currentScroll > lastScroll) {
             header.style.transform = "translateY(-100%)";
             closeAll();
+        } 
+        // Scrolling up
+        else {
+            header.style.transform = "translateY(0)";
         }
         
         lastScroll = currentScroll;
-    }, { passive: true });
 
-    // === 2. HEADER SCROLL BEHAVIOR ===
-    let prevScrollpos = window.pageYOffset;
-    
-    window.onscroll = function() {
-        const currentScrollPos = window.pageYOffset;
-        const navbar = document.getElementById("navbar");
-        
-        if (prevScrollpos > currentScrollPos) {
-            navbar.style.top = "0";
-        } else {
-            navbar.style.top = "-100%"; // Using -100% instead of fixed pixel value to ensure entire header is hidden
+        // Clear existing timer
+        if (scrollTimer !== null) {
+            clearTimeout(scrollTimer);
         }
-        
-        // Close dropdowns when hiding header
-        if (prevScrollpos < currentScrollPos) {
-            closeAll();
-        }
-        
-        prevScrollpos = currentScrollPos;
-    }
+
+        // Set new timer to show header after scrolling stops
+        scrollTimer = setTimeout(() => {
+            header.style.transform = "translateY(0)";
+        }, 1500);
+    }, { passive: true });
 
     // Event Listeners
     document.addEventListener('click', e => {
