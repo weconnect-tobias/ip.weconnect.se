@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Hjälpfunktion för att säkert skapa A-taggar
+    function createLink(href, text, ariaLabel) {
+        const link = document.createElement('a');
+        link.href = href;
+        link.textContent = text;
+        link.setAttribute('aria-label', ariaLabel);
+        return link;
+    }
+
     // 📧 E-post
     const user = "info";
     const domain = "weconnect.se";
@@ -6,8 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailElement = document.getElementById("email");
   
     if (emailElement) {
-      const emailLink = `<a href="mailto:${email} aria-label="Skicka e-post till WeConnect"">${email}</a>`;
-      emailElement.innerHTML = emailLink;
+      // Skapa en säker länk-nod
+      const emailLinkNode = createLink(`mailto:${email}`, email, "Skicka e-post till WeConnect");
+      
+      // Använd appendChild istället för innerHTML för att injicera noden säkert
+      emailElement.appendChild(emailLinkNode);
     }
   
     // ☎️ Telefon
@@ -18,8 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (phoneElement) {
       const fullNumber = `${prefix} ${number}`;
       const telHref = `${prefix}${number}`;
-      const phoneLink = `<a href="tel:${telHref} ">${fullNumber}</a>`;
-      phoneElement.innerHTML = phoneLink;
+      
+      // Skapa en säker länk-nod
+      const phoneLinkNode = createLink(`tel:${telHref}`, fullNumber, `Ring ${fullNumber}`);
+      
+      // Använd appendChild istället för innerHTML för att injicera noden säkert
+      phoneElement.appendChild(phoneLinkNode);
     }
-  });
-  
+});

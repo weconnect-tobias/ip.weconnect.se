@@ -4,7 +4,7 @@ $nonce = base64_encode(random_bytes(16));
 
 // Skicka CSP-headern med den genererade Nonce
 // Lägg till 'nonce-' . $nonce i script-src för att tillåta scripts som har denna nonce.
-header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$nonce}' https:; style-src 'self' https:; font-src 'self'; img-src 'self' data: https:; connect-src 'self';");
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$nonce}' https:; style-src 'self' https:; font-src 'self'; img-src 'self' data: https:; connect-src 'self'; require-trusted-types-for 'script'; trusted-types default;");
 ?>
 <!DOCTYPE html>
 <html lang="sv-SE">
