@@ -144,20 +144,18 @@ nav ul li a:focus {
 }
 
 /* Styr själva gradient-bakgrunden och höjden */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
+.gradient-wrapper {
   background: linear-gradient(135deg, #0d1e55, #9a007e);
-  z-index: -1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-gradient-area {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 400px;
   padding: 120px 0 40px;
   position: relative;
@@ -190,11 +188,12 @@ body::before {
   color: black;
   padding: 50px 20px;
   max-width: 900px;
-  margin: -80px auto 0 auto; /* Negativ marginal för att den ska överlappa gradienten snyggt */
-  position: relative; /* Krävs för att den ska ligga ovanpå */
+  margin: -80px auto 0 auto;
+  position: relative;
   z-index: 2;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2rem;
 }
 
 #main-content-white h1 {

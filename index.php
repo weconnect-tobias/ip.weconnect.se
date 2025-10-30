@@ -171,51 +171,53 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 </head>
 <body>
 
-<header>
-      <div class="header-container">
-        <a href="https://weconnect.se" target="_blank" rel="noopener noreferrer" aria-label="WeConnect Nordic AB Hemsida">
-          <picture>
-            <source srcset="/img/WeConnect-Logo-White-350.webp" type="image/webp">
-            <source srcset="/img/WeConnect-Logo-White-350.png"  type="image/png">
-            <img class="logo-style" src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" loading="lazy" decoding="async" 
-                width="350" height="80">
-          </picture>
-        </a>
-        <nav aria-label="Huvudmeny">
-          <ul>
-            <li>
-              <a href="" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Tjänster
-                <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
-              </a>
-              <ul class="dropdown" role="menu">
-                <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
-                <li><a href="https://weconnect.se/it-support/">IT‑Support</a></li>
-                <li><a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
-                <li><a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
-                <li><a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
-              </ul>
-            </li>
-            <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
-            <li>
-              <a href="https://weconnect.se/kontakt/" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Kontakt
-                <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
-              </a>
-              <ul class="dropdown" role="menu">
-                <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
-              </ul>
-            </li>
-            <li><a href="https://weconnect.se/fjarrsupport/" aria-haspopup="true" aria-expanded="false">Fjärrsupport</a></li>
-          </ul>
-        </nav>
-      </div>
-</header>
-
-<div class="hero-gradient-area">
-      <div class="hero-text">
-        <h1 class="hero-title">IT support &amp; lösningar</h1>
-        <p class="hero-subtitle">För små &amp; mellanstora företag</p>
-      </div>
+<div class="gradient-wrapper">
+  <header>
+    <div class="header-container">
+      <a href="https://weconnect.se" target="_blank" rel="noopener noreferrer" aria-label="WeConnect Nordic AB Hemsida">
+        <picture>
+          <source srcset="/img/WeConnect-Logo-White-350.webp" type="image/webp">
+          <source srcset="/img/WeConnect-Logo-White-350.png"  type="image/png">
+          <img class="logo-style" src="/img/WeConnect-Logo-White-350.png" alt="WeConnect Nordic AB Logotyp" loading="lazy" decoding="async" 
+              width="350" height="80">
+        </picture>
+      </a>
+      <nav aria-label="Huvudmeny">
+        <ul>
+          <li>
+            <a href="" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Tjänster
+              <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
+            </a>
+            <ul class="dropdown" role="menu">
+              <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
+              <li><a href="https://weconnect.se/it-support/">IT‑Support</a></li>
+              <li><a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
+              <li><a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
+              <li><a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
+            </ul>
+          </li>
+          <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
+          <li>
+            <a href="https://weconnect.se/kontakt/" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Kontakt
+              <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
+            </a>
+            <ul class="dropdown" role="menu">
+              <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
+            </ul>
+          </li>
+          <li><a href="https://weconnect.se/fjarrsupport/" aria-haspopup="true" aria-expanded="false">Fjärrsupport</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <div class="hero-gradient-area">
+    <div class="hero-text">
+      <h1 class="hero-title">IT support &amp; lösningar</h1>
+      <p class="hero-subtitle">För små &amp; mellanstora företag</p>
+    </div>
+  </div>
+</div>
     
     <main>
       <section id="main-content-white">
