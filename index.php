@@ -212,7 +212,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
       </div>
 </header>
 
-<div class="hero-gradient-area" role="banner">
+<div class="hero-gradient-area">
       <div class="hero-text">
         <h2 class="hero-title">IT support &amp; lösningar</h2>
         <p  class="hero-subtitle">För små &amp; mellanstora företag</p>
@@ -287,7 +287,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 
 </section>
 </main>
-<footer class="auto-margin-footer">
+<footer class="auto-margin-footer" role="contentinfo">
   <div class="footer-section">
     <img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" height="40">
   </div>
