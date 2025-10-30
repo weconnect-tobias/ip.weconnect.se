@@ -15,9 +15,6 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Preloads -->
-  <link rel="preload" href="/fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
-
   <link rel="canonical" href="https://ip.weconnect.se/" />
   <meta name="seobility" content="df95fd8fec0aef960e98c9575023bef2">
 	
@@ -44,7 +41,6 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   
   <!-- Resource hints -->
   <link rel="preload" href="fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
-
 
   <!-- Ytterligare meta för sökmotorer -->
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
