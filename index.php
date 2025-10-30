@@ -294,7 +294,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   </div>
   <div class="footer-section">
     <strong>Kontakt info</strong><br>
-    <span id="phone"></span>
+    <span id="phone"></span><br>
     <span id="email"></span>.</p>
   </div>
 </footer>
