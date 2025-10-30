@@ -10,6 +10,9 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 <html lang="sv-SE">
   <head>
   <meta charset="UTF-8">
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
+  
   <title>Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect</title>
   <meta name="description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">
 
@@ -27,8 +30,6 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest"         href="/site.webmanifest">
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
 
   <meta property="og:title" content="Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect">
   <meta property="og:locale" content="sv_SE">
