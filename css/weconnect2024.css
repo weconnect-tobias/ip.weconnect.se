@@ -199,6 +199,7 @@ nav ul li ul li a:hover {
   font-weight: 600;
   margin: 0;
   line-height: 1.4;
+  color: #ffffff;
 }
 
 .ip-number {
@@ -206,7 +207,7 @@ nav ul li ul li a:hover {
   font-weight: 700;
   font-size: 1.8rem;
   letter-spacing: 0.5px;
-  color: #003366;
+  color: #4caf50;
   transition: color 0.3s ease;
   cursor: pointer;
   position: relative;

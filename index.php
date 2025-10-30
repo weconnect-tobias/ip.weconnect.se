@@ -1,12 +1,17 @@
 <?php include __DIR__ . '/ip.php'; ?>
+// Generera en unik, base64-kodad Nonce (används endast en gång)
+$nonce = base64_encode(random_bytes(16));
+
+// Skicka CSP-headern med den genererade Nonce
+// Lägg till 'nonce-' . $nonce i script-src för att tillåta scripts som har denna nonce.
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$nonce}' https:; style-src 'self' https:; font-src 'self'; img-src 'self' data: https:; connect-src 'self';");
 <!DOCTYPE html>
 <html lang="sv-SE">
   <head>
   <meta charset="UTF-8">
   <title>Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect</title>
   <meta name="description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';">
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Preloads -->
@@ -37,7 +42,6 @@
   <meta name="twitter:description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">  <meta name="twitter:image" content="https://ip.weconnect.se/img/WeConnect-Logo-White-350.png">
   
   <!-- Resource hints -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="preload" href="fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
 
