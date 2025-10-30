@@ -37,12 +37,9 @@ header {
   margin: 0;
   border: none;
   transform: translateY(0);
-  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: all 0.3s ease;
   background: transparent;
   will-change: transform, background-color;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
 }
 
 header.scrolled {
@@ -54,7 +51,6 @@ header.scrolled {
 
 header.header-hidden {
   transform: translateY(-100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
   pointer-events: none;
 }
 

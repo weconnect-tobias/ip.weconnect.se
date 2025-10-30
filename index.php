@@ -305,6 +305,7 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 </footer>
 
   <!-- JS‑bundle -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" nonce="<?= $nonce ?>"></script>
   <script src="/js/copy-ip.js"     nonce="<?= $nonce ?>" defer></script>
   <script src="/js/email-protect.js" nonce="<?= $nonce ?>" defer></script>
   <script src="/js/dropdown.js"   nonce="<?= $nonce ?>" defer></script>
