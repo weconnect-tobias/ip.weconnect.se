@@ -9,6 +9,5 @@ Allow: /css/weconnect2024.css
 Allow: /js/copy-ip.js
 Allow: /js/email-protect.js
 Allow: /js/dropdown.js
-Allow: /js/hide-on-scroll.js
 
 Sitemap: https://ip.weconnect.se/sitemap.xml

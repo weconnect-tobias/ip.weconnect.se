@@ -4,7 +4,7 @@
 (function() {
     // === 1. DROPDOWN LOGIK ===
     const triggers = document.querySelectorAll('.has-dropdown');
-    const closeAll = () => triggers.forEach(t => { t.parentElement.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); });
+    const closeAll = () => triggers.forEach(t => {t.parentElement.classList.remove('open');t.setAttribute('aria-expanded','false');});
 
     triggers.forEach(trigger => {
         trigger.addEventListener('click', e => {
@@ -27,15 +27,18 @@
     
     if (!header) return; 
 
+    // ✅ NYCKELÄNDRING: Beräkna höjden en gång vid laddning (Fixar Forced Reflow)
+    const headerHeight = header.offsetHeight; 
+
     const hideClass = 'header--hidden';
     let lastScrollY = 0;
-    let ticking = false;
+    let ticking = false; // För prestandaoptimering
 
     function updateHeader() {
         const currentScrollY = window.scrollY;
 
-        // BÖRJA dölja först när vi har scrollat förbi headerns höjd 
-        if (currentScrollY > header.offsetHeight) {
+        // Använder den förberäknade headerHeight istället för att tvinga en ny layout.
+        if (currentScrollY > headerHeight) { 
             
             if (currentScrollY > lastScrollY) {
                 // Scrollar NER: Dölj menyn
@@ -53,7 +56,7 @@
         ticking = false;
     }
 
-    // Använd requestAnimationFrame för optimal prestanda
+    // Använd requestAnimationFrame för optimal prestanda vid scroll
     window.addEventListener('scroll', function() {
         if (!ticking) {
             window.requestAnimationFrame(updateHeader);
