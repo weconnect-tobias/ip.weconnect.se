@@ -2,7 +2,7 @@
  * Accessible dropdown navigation & Hide-on-scroll header logic
  */
 (function() {
-    // === 1. DROPDOWN LOGIK ===
+    // === 1. DROPDOWN LOGIC ===
     const triggers = document.querySelectorAll('.has-dropdown');
     const closeAll = () => triggers.forEach(t => {
         t.parentElement.classList.remove('open');
@@ -21,46 +21,29 @@
     const header = document.querySelector('header');
     if (!header) return;
 
-    const SCROLL_THRESHOLD = 50; // Börja dölj efter 50px scroll
+    const SCROLL_THRESHOLD = 50;
     let lastScrollY = window.scrollY;
-    let ticking = false;
-    let scrollTimer = null;
-    let isHeaderVisible = true;
+    let isScrolling = false;
 
     function updateHeader() {
         const currentScrollY = window.scrollY;
-        const scrollingDown = currentScrollY > lastScrollY;
-        const scrollDelta = Math.abs(currentScrollY - lastScrollY);
 
-        // Only react to significant scroll changes
-        if (scrollDelta < 5) {
-            ticking = false;
-            return;
+        // Always show header at top of page
+        if (currentScrollY <= 0) {
+            header.classList.remove('header--hidden');
         }
-
-        // Aktivera headerdöljning efter tröskelvärdet
-        if (currentScrollY > SCROLL_THRESHOLD) {
-            if (scrollingDown && isHeaderVisible) {
-                requestAnimationFrame(() => {
-                    header.classList.add('header--hidden');
-                    closeAll(); // Stäng dropdowns när headern döljs
-                    isHeaderVisible = false;
-                });
-            } else if (!scrollingDown && !isHeaderVisible) {
-                requestAnimationFrame(() => {
-                    header.classList.remove('header--hidden');
-                    isHeaderVisible = true;
-                });
-            }
-        } else if (!isHeaderVisible) {
-            requestAnimationFrame(() => {
+        // Hide/show based on scroll direction after threshold
+        else if (currentScrollY > SCROLL_THRESHOLD) {
+            if (currentScrollY > lastScrollY) {
+                header.classList.add('header--hidden');
+                closeAll(); // Close dropdowns when hiding header
+            } else if (currentScrollY < lastScrollY) {
                 header.classList.remove('header--hidden');
-                isHeaderVisible = true;
-            });
+            }
         }
 
         lastScrollY = currentScrollY;
-        ticking = false;
+        isScrolling = false;
     }
 
     // Event Listeners
@@ -69,37 +52,14 @@
     });
 
     document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') {
-            closeAll();
-            header.classList.remove('header--hidden');
-            isHeaderVisible = true;
-        }
+        if (e.key === 'Escape') closeAll();
     });
 
-    // Scroll handler with debounce and requestAnimationFrame
+    // Optimized scroll handler with requestAnimationFrame
     window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                updateHeader();
-                ticking = true;
-            });
+        if (!isScrolling) {
+            window.requestAnimationFrame(updateHeader);
+            isScrolling = true;
         }
-
-        // Clear existing timer
-        if (scrollTimer) {
-            clearTimeout(scrollTimer);
-        }
-
-        // Set new timer
-        scrollTimer = setTimeout(() => {
-            // När scrollningen stannar, visa headern om vi är nära toppen
-            if (window.scrollY < SCROLL_THRESHOLD) {
-                header.classList.remove('header--hidden');
-                isHeaderVisible = true;
-            }
-        }, 150); // Vänta 150ms efter att scrollningen stannat
     }, { passive: true });
-
-    // Initialize
-    updateHeader();
 })();
