@@ -105,11 +105,11 @@ header('Cross-Origin-Opener-Policy: same-origin');
   ],
   "author": {
     "@type": "Organization",
-    "name": "WeConnect Nordic AB"
+    "name": "We Connect Nordic AB"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "WeConnect Nordic AB",
+    "name": "We Connect Nordic AB",
     "logo": {
       "@type": "ImageObject",
       "url": "https://ip.weconnect.se/img/WeConnect-Logo-White-350.png"
@@ -126,7 +126,7 @@ header('Cross-Origin-Opener-Policy: same-origin');
   "url": "https://ip.weconnect.se/",
   "author": {
     "@type": "Organization",
-    "name": "WeConnect Nordic AB"
+    "name": "We Connect Nordic AB"
   }
 }
 </script>
@@ -146,7 +146,7 @@ header('Cross-Origin-Opener-Policy: same-origin');
   },
   "provider": {
     "@type": "Organization",
-    "name": "WeConnect Nordic AB",
+    "name": "We Connect Nordic AB",
     "url": "https://weconnect.se"
   },
   "featureList": [
