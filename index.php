@@ -4,7 +4,18 @@ $nonce = base64_encode(random_bytes(16));
 
 // Skicka CSP-headern med den genererade Nonce
 // Lägg till 'nonce-' . $nonce i script-src för att tillåta scripts som har denna nonce.
-header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$nonce}' https:; style-src 'self' https:; font-src 'self'; img-src 'self' data: https:; connect-src 'self'; require-trusted-types-for 'script'; trusted-types default;");
+// Tighten Content Security Policy to reduce XSS risk.
+// Notes:
+// - We keep the per-request nonce ("nonce-{$nonce}") and 'self' for local scripts.
+// - Restrict external scripts to the specific CDN host used (code.jquery.com) rather than allowing all https: origins.
+// - Add useful security directives: object-src, base-uri, frame-ancestors and form-action.
+// - Avoid adding 'unsafe-inline' for script-src (this weakens XSS protection). Use nonces/hashes or move inline scripts to external files.
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$nonce}' https://code.jquery.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; require-trusted-types-for 'script'; trusted-types default;");
+// Cross-Origin-Opener-Policy: isolate top-level window from other origins (popups, other windows)
+// This enables basic origin isolation. If you need full isolation for features like SharedArrayBuffer,
+// consider also enabling Cross-Origin-Embedder-Policy: require-corp and ensure all cross-origin resources
+// are served with appropriate CORP/CORS headers.
+header('Cross-Origin-Opener-Policy: same-origin');
 ?>
 <!DOCTYPE html>
 <html lang="sv-SE">
