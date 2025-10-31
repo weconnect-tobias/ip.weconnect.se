@@ -16,6 +16,9 @@ header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-{$
 // consider also enabling Cross-Origin-Embedder-Policy: require-corp and ensure all cross-origin resources
 // are served with appropriate CORP/CORS headers.
 header('Cross-Origin-Opener-Policy: same-origin');
+// Hide PHP X-Powered-By header for better security fingerprinting
+@ini_set('expose_php', '0');
+@header_remove('X-Powered-By');
 ?>
 <!DOCTYPE html>
 <html lang="sv-SE">
@@ -232,9 +235,9 @@ header('Cross-Origin-Opener-Policy: same-origin');
     
     <main>
       <section id="main-content-white">
-                <div class="ip-box">
-          <img src="/img/icons/ip-icon.svg" alt="IPv4 &amp; IPv6 ikon" class="ip-icon" width="24" height="24">
-          <h1>Din IP‑adress (IPv4 &amp; IPv6) är&nbsp;
+        <div class="ip-box">
+      <img src="/img/icons/ipv4-ipv6-icon.svg" alt="IPv4 &amp; IPv6 ikon" class="ip-icon" width="36" height="18">
+      <h1>Din IP‑adress (IPv4 &amp; IPv6) är&nbsp;
             <span id="ip-display" 
                   class="ip-number" 
                   role="button" 
