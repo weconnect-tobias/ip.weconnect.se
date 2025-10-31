@@ -315,7 +315,7 @@ header('Cross-Origin-Opener-Policy: same-origin');
 </main>
 <footer class="auto-margin-footer" role="contentinfo">
   <div class="footer-section">
-<img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" **width="175" height="40"**>  </div>
+<img src="img/WeConnect-Logo-White-350.webp" alt="WeConnect logotyp – expert på IT-support, nätverk och säkerhet" width="175" height="40">  </div>
   <div class="footer-section">
     <strong>Adress Strömstad</strong><br>
     Oslovägen 50<br>
