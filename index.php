@@ -236,7 +236,16 @@ header('Cross-Origin-Opener-Policy: same-origin');
     <main>
       <section id="main-content-white">
         <div class="ip-box">
-      <img src="/img/icons/ipv4-ipv6-icon.svg" alt="IPv4 &amp; IPv6 ikon" class="ip-icon" width="36" height="18">
+      <!-- Inline combined IPv4/IPv6 icon (aria-hidden) to avoid extra request; screen reader label provided separately) -->
+      <svg class="ip-icon" width="36" height="18" viewBox="0 0 48 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <title>IPv4 och IPv6 ikon</title>
+    <rect x="1" y="2" width="20" height="20" rx="3" fill="#0d1e55"/>
+    <path d="M5 8h10v2H5V8zm0 4h6v2H5v-2z" fill="#9a007e"/>
+    <circle cx="36" cy="12" r="10" fill="#111835"/>
+    <path d="M31 12c0-1.657 1.343-3 3-3h4c1.657 0 3 1.343 3 3s-1.343 3-3 3h-4c-1.657 0-3-1.343-3-3z" fill="#9a007e"/>
+    <line x1="24" y1="4" x2="24" y2="20" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+      </svg>
+      <span class="sr-only">Visar stöd för IPv4 och IPv6</span>
       <h1>Din IP‑adress (IPv4 &amp; IPv6) är&nbsp;
             <span id="ip-display" 
                   class="ip-number" 
