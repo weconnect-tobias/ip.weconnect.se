@@ -24,7 +24,7 @@ header('Cross-Origin-Opener-Policy: same-origin');
   <!-- Main stylesheet -->
   <link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
 
-  <title>Vad är min IP‑adress? | Gratis IP‑check (IPv4 & IPv6) – WeConnect</title>
+  <title>IPv6 &amp; IPv4 — Vad är min IP‑adress? | Gratis IP‑check – WeConnect</title>
   <meta name="description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -233,7 +233,8 @@ header('Cross-Origin-Opener-Policy: same-origin');
     <main>
       <section id="main-content-white">
                 <div class="ip-box">
-          <h1>Din IP‑adress är&nbsp;
+          <img src="/img/icons/ip-icon.svg" alt="IPv4 &amp; IPv6 ikon" class="ip-icon" width="24" height="24">
+          <h1>Din IP‑adress (IPv4 &amp; IPv6) är&nbsp;
             <span id="ip-display" 
                   class="ip-number" 
                   role="button" 

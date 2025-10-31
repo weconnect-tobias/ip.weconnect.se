@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-labelledby="ipIconTitle">
+  <title id="ipIconTitle">IPv4 och IPv6 ikon</title>
+  <circle cx="12" cy="12" r="10" fill="#111835"/>
+  <path d="M7 12c0-1.657 1.343-3 3-3h4c1.657 0 3 1.343 3 3s-1.343 3-3 3h-4c-1.657 0-3-1.343-3-3z" fill="#9a007e"/>
+</svg>
