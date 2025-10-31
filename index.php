@@ -28,8 +28,7 @@ header('Cross-Origin-Opener-Policy: same-origin');
   <link rel="stylesheet" type="text/css" href="css/weconnect2024.css">
 
   <title>IPv6 &amp; IPv4 — Vad är min IP‑adress? | Gratis IP‑check – WeConnect</title>
-  <meta name="description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt – snabbt, gratis och utan spårning. Perfekt för support, felsökning och nätverkskontroll.">
-
+  <meta name="description" content="Visa din publika IP‑adress (IPv4 & IPv6) direkt. Lär dig vad en IP‑adress är och hur den används – snabbt, gratis och säkert.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="canonical" href="https://ip.weconnect.se/" />
@@ -56,6 +55,10 @@ header('Cross-Origin-Opener-Policy: same-origin');
   
   <!-- Resource hints -->
   <link rel="preload" href="/fonts/BalooDa2-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Preconnect to important external origins to shave connection time -->
+  <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+  <!-- Preload critical stylesheet to improve LCP (loaded as style below) -->
+  <link rel="preload" href="/css/weconnect2024.css" as="style">
 
   <!-- Ytterligare meta för sökmotorer -->
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -199,27 +202,28 @@ header('Cross-Origin-Opener-Policy: same-origin');
       <nav aria-label="Huvudmeny">
         <ul>
           <li>
-            <a class="has-dropdown" aria-haspopup="true" aria-expanded="false">Tjänster
+            <button type="button" class="has-dropdown" id="toggle-menu-tjanster" aria-haspopup="true" aria-expanded="false" aria-controls="menu-tjanster">Tjänster
               <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
-            </a>
-            <ul class="dropdown" role="menu">
-              <li><a href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
-              <li><a href="https://weconnect.se/it-support/">IT‑Support</a></li>
-              <li><a href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
-              <li><a href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
-              <li><a href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
+            </button>
+            <ul class="dropdown" role="menu" id="menu-tjanster" aria-labelledby="toggle-menu-tjanster">
+              <li><a role="menuitem" href="https://weconnect.se/nis-nis2-iso27001-loggning/">NIS/NIS2 & ISO27001 loggning</a></li>
+              <li><a role="menuitem" href="https://weconnect.se/it-support/">IT‑Support</a></li>
+              <li><a role="menuitem" href="https://weconnect.se/natverk-wifi/">Nätverk & Wifi</a></li>
+              <li><a role="menuitem" href="https://weconnect.se/sakert-natverk/">Säkert Nätverk</a></li>
+              <li><a role="menuitem" href="https://weconnect.se/wordpress-hemsida/">Webbdesign i WordPress</a></li>
             </ul>
           </li>
           <li><a href="https://weconnect.se/system-flight/">System Flight</a></li>
           <li>
-            <a href="https://weconnect.se/kontakt/" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Kontakt
+            <button type="button" class="has-dropdown" id="toggle-menu-kontakt" aria-haspopup="true" aria-expanded="false" aria-controls="menu-kontakt">Kontakt
               <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M96 192h128c17.7 0 26.6 21.5 14.1 34L174.1 290c-7.6 7.6-19.8 7.6-27.3 0L81.9 226c-12.5-12.5-3.6-34 14.1-34z"/></svg>
-            </a>
-            <ul class="dropdown" role="menu">
-              <li><a href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
+            </button>
+            <ul class="dropdown" role="menu" id="menu-kontakt" aria-labelledby="toggle-menu-kontakt">
+              <li><a role="menuitem" href="https://weconnect.se/kontakt/">Kontakta oss</a></li>
+              <li><a role="menuitem" href="https://weconnect.se/nyheter-tips/">Nyheter & Tips</a></li>
             </ul>
           </li>
-          <li><a href="https://weconnect.se/fjarrsupport/" aria-haspopup="true" aria-expanded="false">Fjärrsupport</a></li>
+          <li><a href="https://weconnect.se/fjarrsupport/">Fjärrsupport</a></li>
         </ul>
       </nav>
     </div>
@@ -234,27 +238,61 @@ header('Cross-Origin-Opener-Policy: same-origin');
 </div>
     
     <main>
-      <section id="main-content-white">
-        <div class="ip-box">
-      <!-- Inline combined IPv4/IPv6 icon (aria-hidden) to avoid extra request; screen reader label provided separately) -->
+  <section id="main-content-white">
+    <div class="ip-box">
+
+      <!-- Ikon -->
       <svg class="ip-icon" width="36" height="18" viewBox="0 0 48 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-    <title>IPv4 och IPv6 ikon</title>
-    <rect x="1" y="2" width="20" height="20" rx="3" fill="#0d1e55"/>
-    <path d="M5 8h10v2H5V8zm0 4h6v2H5v-2z" fill="#9a007e"/>
-    <circle cx="36" cy="12" r="10" fill="#111835"/>
-    <path d="M31 12c0-1.657 1.343-3 3-3h4c1.657 0 3 1.343 3 3s-1.343 3-3 3h-4c-1.657 0-3-1.343-3-3z" fill="#9a007e"/>
-    <line x1="24" y1="4" x2="24" y2="20" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+        <title>IPv4 och IPv6 ikon</title>
+        <rect x="1" y="2" width="20" height="20" rx="3" fill="#0d1e55"/>
+        <path d="M5 8h10v2H5V8zm0 4h6v2H5v-2z" fill="#9a007e"/>
+        <circle cx="36" cy="12" r="10" fill="#111835"/>
+        <path d="M31 12c0-1.657 1.343-3 3-3h4c1.657 0 3 1.343 3 3s-1.343 3-3 3h-4c-1.657 0-3-1.343-3-3z" fill="#9a007e"/>
+        <line x1="24" y1="4" x2="24" y2="20" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
       </svg>
+
       <span class="sr-only">Visar stöd för IPv4 och IPv6</span>
-      <h1>Din IP‑adress (IPv4 &amp; IPv6) är&nbsp;
-            <span id="ip-display" 
-                  class="ip-number" 
-                  role="button" 
-                  tabindex="0"
-                  aria-label="<?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?> (Klicka för att kopiera)"
-                  data-ip="<?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>"><?= htmlspecialchars($ipaddress, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?></span>
-          </h1>
-        </div>
+
+      <!-- Rubrik -->
+      <h1>Din publika IP‑adress</h1>
+
+      <!-- IPv4 -->
+      <?php if ($ipv4): ?>
+        <p>
+          <span class="ip-label">IPv4:</span>
+          <span id="ipv4-display"
+                class="ip-number"
+                role="button"
+                tabindex="0"
+                aria-label="<?= htmlspecialchars($ipv4, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?> (Klicka för att kopiera)"
+                data-ip="<?= htmlspecialchars($ipv4, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>">
+                <?= htmlspecialchars($ipv4, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>
+          </span>
+        </p>
+      <?php endif; ?>
+
+      <!-- IPv6 -->
+      <?php if ($ipv6): ?>
+        <p>
+          <span class="ip-label">IPv6:</span>
+          <span id="ipv6-display"
+                class="ip-number"
+                role="button"
+                tabindex="0"
+                aria-label="<?= htmlspecialchars($ipv6, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?> (Klicka för att kopiera)"
+                data-ip="<?= htmlspecialchars($ipv6, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>">
+                <?= htmlspecialchars($ipv6, ENT_QUOTES|ENT_HTML5, 'UTF-8') ?>
+          </span>
+        </p>
+      <?php endif; ?>
+
+      <!-- Om ingen IP hittades -->
+      <?php if (!$ipv4 && !$ipv6): ?>
+        <p>Ingen publik IP-adress kunde identifieras.</p>
+      <?php endif; ?>
+
+    </div>
+  </section>
 
   <div>
     <h2>Vad är en IP-adress? (Förklaring)</h2>
